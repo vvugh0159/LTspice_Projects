@@ -1,0 +1,5 @@
+Questionable use of curly braces in "b1 n001 0 v={v(out_log_amp)/v(vn)}"
+    Error: undefined symbol in: "[v](out_log_amp)/v(vn)"
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\Log_Current_Amp\Log_Current_Amp.asc
+
+Fatal Error: B1: Unknown circuit node: "out_log_amp" requested in behavioral source

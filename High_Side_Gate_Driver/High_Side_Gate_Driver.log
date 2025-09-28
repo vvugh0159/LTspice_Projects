@@ -1,0 +1,21 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\High_Side_Gate_Driver\High_Side_Gate_Driver.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Mon Nov 27 22:31:25 2023
+Total elapsed time: 0.174 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3920
+traniter = 3913
+tranpoints = 1643
+accept = 1494
+rejected = 149
+matrix size = 12
+fillins = 9
+solver = Normal
+Matrix Compiler1:      54 opcodes  0.2/[0.1]/0.1
+Matrix Compiler2: off  [0.1]/0.1/0.1
+

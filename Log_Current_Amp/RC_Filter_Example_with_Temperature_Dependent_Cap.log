@@ -1,0 +1,21 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\Log_Current_Amp\RC_Filter_Example_with_Temperature_Dependent_Cap.asc
+
+.step temp=-55°C
+.step temp=25°C
+.step temp=150°C
+
+Date: Sun Jul 25 19:08:19 2021
+Total elapsed time: 0.094 seconds.
+
+tnom = 27
+temp = 150
+method = trap
+totiter = 0
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 3
+fillins = 0
+solver = Normal
+

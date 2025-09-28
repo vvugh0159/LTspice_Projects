@@ -1,0 +1,87 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\NUFEP_Simulations\HV_Power_Amp.asc
+
+WARNING: Node NC_01 is floating.
+
+WARNING: Less than two connections to node NC_01.  This node is used by C1.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-005
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+Gmin = 5.90244e-006
+vernier = 0.166667
+vernier = 0.222222
+Gmin = 3.99104e-006
+vernier = 0.296296
+Gmin = 2.13064e-006
+vernier = 0.395061
+vernier = 0.526748
+Gmin = 7.77797e-007
+vernier = 0.702331
+vernier = 0.351165
+vernier = 0.175583
+vernier = 0.0877914
+Gmin = 3.30314e-007
+vernier = 0.0438957
+vernier = 0.0585276
+vernier = 0.0292638
+Gmin = 3.06023e-007
+vernier = 0.0390184
+Gmin = 2.80411e-007
+vernier = 0.0520245
+vernier = 0.0693659
+Gmin = 2.42246e-007
+vernier = 0.0924879
+vernier = 0.123317
+Gmin = 1.92037e-007
+vernier = 0.164423
+Gmin = 1.33558e-007
+vernier = 0.21923
+vernier = 0.292307
+Gmin = 7.31318e-008
+vernier = 0.389743
+vernier = 0.519657
+Gmin = 2.8476e-008
+vernier = 0.692876
+Gmin = 6.6992e-009
+vernier = 0.923834
+vernier = 1
+Gmin = 7.88719e-010
+Gmin = 8.4688e-011
+Gmin = 9.09331e-012
+Gmin = 9.76387e-013
+Gmin = 1.04839e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+.step cf=1e-012
+.step cf=1e-011
+.step cf=1e-010
+.step cf=1e-009
+.step cf=1e-008
+.step cf=1e-007
+
+Date: Tue Jul 20 22:03:30 2021
+Total elapsed time: 0.709 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 4169
+traniter = 2626
+tranpoints = 1238
+accept = 1190
+rejected = 48
+matrix size = 29
+fillins = 20
+solver = Normal
+Matrix Compiler1: 2.74 KB object code size  0.5/0.2/[0.2]
+Matrix Compiler2: 2.89 KB object code size  0.2/0.3/[0.2]
+

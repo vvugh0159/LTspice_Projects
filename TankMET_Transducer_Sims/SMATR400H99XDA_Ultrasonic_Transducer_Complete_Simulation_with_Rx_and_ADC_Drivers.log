@@ -1,0 +1,80 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\TankMET_Transducer_Sims\SMATR400H99XDA_Ultrasonic_Transducer_Complete_Simulation_with_Rx_and_ADC_Drivers.asc
+
+WARNING: Less than two connections to node TX_PRE_LIA.  This node is used by E2.
+WARNING: Less than two connections to node RX_PRE_LIA.  This node is used by E4.
+WARNING: Less than two connections to node OUT_DIFF_TX.  This node is used by E5.
+WARNING: Less than two connections to node OUT_DIFF_RX.  This node is used by E6.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Increasing initial diagonal Gmin to 100
+Increasing initial diagonal Gmin to 1000
+Gmin = 1000
+Gmin = 107.374
+Gmin = 11.5292
+Gmin = 1.23794
+Gmin = 0.132923
+Gmin = 0.0142725
+Gmin = 0.0015325
+Gmin = 0.00016455
+Gmin = 1.76685e-005
+Gmin = 1.89714e-006
+Gmin = 2.03704e-007
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+Gmin = 5.33997e-008
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+vernier = 0.0208333
+Gmin = 5.18275e-008
+vernier = 0.0277778
+Gmin = 4.86971e-008
+vernier = 0.037037
+vernier = 0.0493827
+Gmin = 4.38704e-008
+vernier = 0.0658435
+vernier = 0.0877914
+Gmin = 3.71631e-008
+vernier = 0.117055
+Gmin = 2.86574e-008
+vernier = 0.156073
+vernier = 0.208098
+Gmin = 1.85949e-008
+vernier = 0.277464
+vernier = 0.369952
+Gmin = 9.41351e-009
+vernier = 0.493269
+Gmin = 3.28905e-009
+vernier = 0.657691
+vernier = 0.876922
+Gmin = 5.97122e-010
+vernier = 1
+Gmin = 6.73925e-011
+Gmin = 7.23621e-012
+Gmin = 7.76982e-013
+Gmin = 0
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+Ignoring empty pin current: Ix(u1:5)
+Ignoring empty pin current: Ix(u1:5)
+
+Date: Sat Aug 21 22:09:24 2021
+Total elapsed time: 6.867 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 202784
+traniter = 201061
+tranpoints = 66211
+accept = 44874
+rejected = 21337
+matrix size = 160
+fillins = 256
+solver = Normal
+Thread vector: 27.1/12.8[11] 10.3/4.3[11] 3.4/2.1[8] 0.4/1.7[1]  2592/500
+Matrix Compiler1: 20.39 KB object code size  4.3/1.8/[1.2]
+Matrix Compiler2: 17.50 KB object code size  1.4/2.1/[0.8]
+

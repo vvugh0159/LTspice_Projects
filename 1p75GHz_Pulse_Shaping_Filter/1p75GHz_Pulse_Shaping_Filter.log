@@ -1,0 +1,31 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\1p75GHz_Pulse_Shaping_Filter\1p75GHz_Pulse_Shaping_Filter.asc
+
+Vs: Removing PWL point (1.14286e-009,1)
+Vs: Removing PWL point (2.85714e-009,-1)
+Vs: Removing PWL point (8.57143e-009,1)
+Vs: Removing PWL point (1.02857e-008,-1)
+Vs: Removing PWL point (2.28571e-008,-1)
+Vs: Removing PWL point (2.74286e-008,1)
+Vs: Removing PWL point (2.97143e-008,-1)
+Vs: Removing PWL point (3.42857e-008,1)
+Vs: Removing PWL point (3.88571e-008,-1)
+Vs: Removing PWL point (4.05714e-008,1)
+Direct Newton iteration for .op point succeeded.
+
+Date: Sat Jan 06 21:12:03 2024
+Total elapsed time: 0.166 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3295
+traniter = 3292
+tranpoints = 1647
+accept = 1454
+rejected = 193
+matrix size = 7
+fillins = 0
+solver = Normal
+Matrix Compiler1:      14 opcodes  0.1/[0.1]/0.1
+Matrix Compiler2:      38 opcodes  0.1/[0.1]/0.1
+

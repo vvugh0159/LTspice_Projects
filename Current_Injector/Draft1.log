@@ -1,0 +1,151 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\Current_Injector\Draft1.asc
+
+WARNING: Node N004 is floating.
+
+WARNING: Less than two connections to node N004.  This node is used by C1.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+Gmin = 0.000604946
+vernier = 0.166667
+Gmin = 0.000422915
+vernier = 0.222222
+vernier = 0.296296
+Gmin = 0.000236884
+vernier = 0.395061
+vernier = 0.526748
+Gmin = 9.60012e-005
+vernier = 0.702331
+Gmin = 2.30345e-005
+vernier = 0.936441
+vernier = 0.46822
+vernier = 0.23411
+vernier = 0.117055
+vernier = 0.0585276
+vernier = 0.0292638
+vernier = 0.0146319
+Gmin = 1.28652e-005
+vernier = 0.00731595
+vernier = 0.00365797
+vernier = 0.00182899
+vernier = 0.000914493
+vernier = 0.00121932
+Gmin = 1.28466e-005
+vernier = 0.00162576
+Gmin = 1.2801e-005
+vernier = 0.00216769
+vernier = 0.00289025
+Gmin = 1.27267e-005
+vernier = 0.00385366
+vernier = 0.00513821
+Gmin = 1.26098e-005
+vernier = 0.00685095
+Gmin = 1.24224e-005
+vernier = 0.0091346
+vernier = 0.0121795
+Gmin = 1.21215e-005
+vernier = 0.0162393
+vernier = 0.0216524
+Gmin = 1.16598e-005
+vernier = 0.0288698
+Gmin = 1.09485e-005
+vernier = 0.0384931
+vernier = 0.0513241
+Gmin = 9.87788e-006
+vernier = 0.0684321
+vernier = 0.0912428
+Gmin = 8.39566e-006
+vernier = 0.121657
+Gmin = 6.45683e-006
+vernier = 0.162209
+vernier = 0.216279
+Gmin = 4.21518e-006
+vernier = 0.288372
+vernier = 0.384496
+Gmin = 2.16249e-006
+vernier = 0.512661
+vernier = 0.25633
+vernier = 0.128165
+Gmin = 1.32421e-006
+vernier = 0.0640826
+vernier = 0.0854435
+Gmin = 1.14791e-006
+vernier = 0.113925
+vernier = 0.151899
+Gmin = 8.77011e-007
+vernier = 0.202533
+Gmin = 5.68611e-007
+vernier = 0.270043
+vernier = 0.360058
+Gmin = 2.8238e-007
+vernier = 0.480077
+vernier = 0.640102
+Gmin = 9.52175e-008
+vernier = 0.853469
+vernier = 0.426735
+Gmin = 2.78209e-008
+vernier = 0.213367
+vernier = 0.106684
+vernier = 0.0533418
+vernier = 0.0266709
+Gmin = 2.60644e-008
+vernier = 0.0133355
+vernier = 0.0177806
+Gmin = 2.52396e-008
+vernier = 0.0237075
+Gmin = 2.3932e-008
+vernier = 0.03161
+vernier = 0.0421466
+Gmin = 2.18907e-008
+vernier = 0.0561954
+vernier = 0.0749272
+Gmin = 1.89969e-008
+vernier = 0.099903
+Gmin = 1.52111e-008
+vernier = 0.133204
+vernier = 0.177605
+Gmin = 1.05034e-008
+vernier = 0.236807
+vernier = 0.315742
+Gmin = 5.85778e-009
+vernier = 0.42099
+Gmin = 2.37134e-009
+vernier = 0.561319
+vernier = 0.748426
+Gmin = 5.43066e-010
+vernier = 0.997901
+vernier = 1
+Gmin = 6.48167e-011
+Gmin = 6.95964e-012
+Gmin = 7.47286e-013
+Gmin = 0
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+Ignoring empty pin current: Ix(u2:2)
+Ignoring empty pin current: Ix(u2:2)
+
+Date: Fri Aug 20 20:42:04 2021
+Total elapsed time: 0.115 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 3607
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 30
+fillins = 22
+solver = Normal
+Matrix Compiler1:     136 opcodes
+Matrix Compiler2: 2.57 KB object code size  0.3/0.5/[0.3]
+

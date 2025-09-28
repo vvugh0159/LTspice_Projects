@@ -1,0 +1,21 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\PSU_Decoupling\3V3_Decoupling.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Mon Sep 06 17:05:44 2021
+Total elapsed time: 0.313 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 8745
+traniter = 8742
+tranpoints = 4372
+accept = 3409
+rejected = 963
+matrix size = 28
+fillins = 0
+solver = Normal
+Matrix Compiler1: 1.27 KB object code size  0.5/0.2/[0.2]
+Matrix Compiler2: 1.95 KB object code size  0.2/0.4/[0.2]
+

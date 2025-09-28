@@ -1,0 +1,28 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\NUFEP_Simulations\H_Bridge_Driver.asc
+
+WARNING: Less than two connections to node VREF.  This node is used by E1.
+WARNING: Less than two connections to node N017.  This node is used by E2.
+Direct Newton iteration for .op point succeeded.
+Ignoring empty pin current: Ix(u1:5)
+Ignoring empty pin current: Ix(u2:5)
+Ignoring empty pin current: Ix(u1:5)
+Ignoring empty pin current: Ix(u2:5)
+
+Date: Sat Jan 16 23:18:17 2021
+Total elapsed time: 6.428 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 581473
+traniter = 581445
+tranpoints = 156164
+accept = 113831
+rejected = 42333
+matrix size = 84
+fillins = 14
+solver = Normal
+Thread vector: 4.4/6.4[1] 4.9/3.8[2] 0.7/5.4[1] 0.2/0.9[1]  2592/500
+Matrix Compiler1: 4.48 KB object code size  0.7/0.4/[0.3]
+Matrix Compiler2: 5.90 KB object code size  0.3/0.5/[0.3]
+

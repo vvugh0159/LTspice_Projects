@@ -1,0 +1,33 @@
+Version 4
+SymbolType BLOCK
+LINE Normal -16 0 -96 0
+LINE Normal -16 -16 -16 0
+LINE Normal 16 0 -16 -16
+LINE Normal -16 16 16 0
+LINE Normal -16 0 -16 16
+LINE Normal 64 0 16 0
+LINE Normal -32 -32 -32 0
+LINE Normal -16 -32 -32 -32
+LINE Normal -16 -41 -16 -32
+LINE Normal 16 -41 -16 -41
+LINE Normal 16 -24 16 -41
+LINE Normal -16 -24 16 -24
+LINE Normal -16 -32 -16 -24
+LINE Normal 32 -32 16 -32
+LINE Normal 32 0 32 -32
+RECTANGLE Normal 128 -64 -128 64
+TEXT -13 -33 Left 1 10k
+SYMATTR Prefix X
+SYMATTR Value HMC799
+PIN -128 0 LEFT 8
+PINATTR PinName IN
+PINATTR SpiceOrder 1
+PIN 128 0 RIGHT 8
+PINATTR PinName OUT
+PINATTR SpiceOrder 2
+PIN 128 -32 RIGHT 8
+PINATTR PinName VCC
+PINATTR SpiceOrder 3
+PIN 128 32 RIGHT 8
+PINATTR PinName VEE
+PINATTR SpiceOrder 4

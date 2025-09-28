@@ -1,0 +1,35 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\NUFEP_Simulations\Dual_Voltage_Hbridge_Voltage_Driver.asc
+
+Direct Newton iteration for .op point succeeded.
+Heightened Def Con from 1.0188e-009 to 1.14383e-009
+Heightened Def Con from 1.14402e-009 to 3.26902e-009
+Heightened Def Con from 6.24741e-007 to 6.24882e-007
+Heightened Def Con from 6.25075e-007 to 6.26091e-007
+Heightened Def Con from 6.26091e-007 to 6.26095e-007
+Heightened Def Con from 6.26097e-007 to 6.26237e-007
+Heightened Def Con from 6.26392e-007 to 6.28392e-007
+Heightened Def Con from 8.68835e-005 to 8.68855e-005
+Heightened Def Con from 0.000109589 +to 0.00010959
+Heightened Def Con from 0.000109879 to 0.000109879
+Heightened Def Con from 0.000109883 to 0.000109884
+Heightened Def Con from 0.000109884 to 0.000109886
+Heightened Def Con from 0.00010989 to 0.000109891
+Heightened Def Con from 0.000109939 to 0.000109939
+
+Date: Thu Jan 28 20:13:58 2021
+Total elapsed time: 32.173 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 6599594
+traniter = 6599574
+tranpoints = 1188938
+accept = 792598
+rejected = 396355
+matrix size = 30
+fillins = 2
+solver = Normal
+Matrix Compiler1:     103 opcodes  0.3/[0.2]/0.2
+Matrix Compiler2: off  [0.2]/0.3/0.2
+

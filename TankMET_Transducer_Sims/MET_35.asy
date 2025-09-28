@@ -1,0 +1,37 @@
+Version 4
+SymbolType BLOCK
+LINE Normal -32 -48 -80 -48
+LINE Normal -32 -16 -32 -48
+LINE Normal -32 48 -32 16
+LINE Normal -32 48 -80 48
+LINE Normal 32 -48 80 -48
+LINE Normal 32 -16 32 -48
+LINE Normal 32 48 32 16
+LINE Normal 32 48 80 48
+LINE Normal -6 48 -6 -48
+LINE Normal 6 48 6 -48
+RECTANGLE Normal -80 -80 80 80
+CIRCLE Normal -13 -29 -19 -35
+CIRCLE Normal 13 -29 19 -35
+ARC Normal -33 -20 -12 -4 -38 -5 -38 -19
+ARC Normal -33 -11 -12 9 -38 8 -38 -10
+ARC Normal -33 1 -12 21 -38 20 -38 2
+ARC Normal 33 -20 12 -4 38 -19 38 -5
+ARC Normal 33 -11 12 9 38 -10 38 8
+ARC Normal 33 1 12 21 38 2 38 20
+TEXT -38 94 Left 2 1 : 8.66
+WINDOW 0 3 -83 Bottom 2
+WINDOW 3 1 -138 Top 2
+SYMATTR Value MET_35
+PIN -80 -48 LEFT 8
+PINATTR PinName 1
+PINATTR SpiceOrder 1
+PIN -80 48 LEFT 8
+PINATTR PinName 2
+PINATTR SpiceOrder 2
+PIN 80 48 RIGHT 8
+PINATTR PinName 3
+PINATTR SpiceOrder 3
+PIN 80 -48 RIGHT 8
+PINATTR PinName 4
+PINATTR SpiceOrder 4

@@ -1,0 +1,21 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\SELICOM_II_LiFi_Simulations\Transconductance_Amplifier.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Thu Nov 03 23:12:40 2022
+Total elapsed time: 0.361 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 73099
+traniter = 73091
+tranpoints = 34247
+accept = 24333
+rejected = 9914
+matrix size = 25
+fillins = 11
+solver = Normal
+Matrix Compiler1: 2.29 KB object code size  0.4/0.2/[0.1]
+Matrix Compiler2: 2.17 KB object code size  0.2/0.2/[0.2]
+

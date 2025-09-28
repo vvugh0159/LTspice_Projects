@@ -1,0 +1,26 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\PONSEP_High_Voltage_Simulation\High_Voltage_Test_Solution.asc
+
+WARNING: Node NC_01 is floating.
+
+WARNING: Less than two connections to node VCC.  This node is used by V2.
+WARNING: Less than two connections to node VEE.  This node is used by V3.
+WARNING: Less than two connections to node NC_01.  This node is used by C5.
+Direct Newton iteration for .op point succeeded.
+
+Date: Wed Sep 02 16:05:53 2020
+Total elapsed time: 0.055 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2119
+traniter = 2116
+tranpoints = 1059
+accept = 1057
+rejected = 2
+matrix size = 9
+fillins = 0
+solver = Normal
+Matrix Compiler1: 206 bytes object code size  0.1/0.1/[0.0]
+Matrix Compiler2: 431 bytes object code size  0.1/0.1/[0.0]
+

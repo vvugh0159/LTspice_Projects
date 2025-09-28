@@ -1,0 +1,70 @@
+* Library of Vishay NTC Thermistors for LTspice XVII
+*
+*
+* $Revision:   2.0  $
+* $Author:   Alain Stas  $
+* $Date:   20 June 2019 $
+* $Revision History : addition of NTCS0402E3103_L1T
+*---------------------------------------------------------------
+*
+* Vishay NTC Thermistors included in this file : NTCLE100/NTCLE101/NTCLE201/NTCLE203/NTCS
+* DESCRIPTION: through hole and surface mount NTC thermistors
+* For power rating and temperature range limitations, see
+* NTCLE100 : http://www.vishay.com/thermistors/list/product-29049/
+* NTCLE101 : http://www.vishay.com/thermistors/list/product-29046/ and 29152
+* NTCLE203 :http://www.vishay.com/thermistors/list/product-29048/ and 29118
+* NTCS0402:http://www.vishay.com/thermistors/list/product-29003/
+* NTCS0603:http://www.vishay.com/thermistors/list/product-29056/
+* NTCS0805:http://www.vishay.com/thermistors/list/product-29044/
+* or use the search engine of Vishay for visualizing particular data sheet at http://www.vishay.com/
+*
+* the model is applicable for transient and steady states conditions under bias including self heating.
+* tolerances TolB on Steinhart & Hart coef. are valid only between 25 and 85°C,and are only given for information outside this range
+* the tolerances on R25 and B25/85 are simulated by the values of R2 and R3 under the form of a random distribution using the LT spice MC function
+*$
+.SUBCKT NTC_BASE Rn Rp Params:W=1 X=1 Y=1 Z=1 GTH=1 GTH1=1 CTH=1 A=1 R25=1 B=1 C=1 D=1 T0=273.15
+R2 tR 0 {mc(1,tolR/100)}
+R3 tB 0 {mc(1,tolB/100)}
+I1 tR 0 -1
+I2 tB 0 -1
+G_G1         AOUT 0 VALUE { if(TEMP>25,V(AOUT,
++  0)/(R25*V(TR)*exp(((D*v(TB)/(T0+abs(V(H))+TEMP)+C*V(TB))/(T0+abs(V(H))+TEMP)+B*v(TB))/(T0+TEMP+abs(V(H)))+A*v(TB))),0)
++  }
+G_G2         AOUT 0 VALUE { IF(TEMP>25,0,V(AOUT,
++  0)/(R25*v(TR)*exp(((Z*v(TB)/(T0+abs(V(H))+TEMP)+Y*v(TB))/(T0+abs(V(H))+TEMP)+X*v(TB))/(T0+abs(V(H))+TEMP)+W*v(TB))))
++  }
+G_G3         H 0 VALUE {
++  if(TEMP>25,-V(RP,RN)*V(RP,RN)/(R25*v(TR)*exp(((D*v(TB)/(T0+abs(V(H))+TEMP)+C*v(TB))/(T0+abs(V(H))+TEMP)+B*v(TB))/
++  (T0+TEMP+abs(V(H)))+A*v(TB))),0)}
+G_G4         H 0 VALUE {
++  if(TEMP>25,0,-V(RP,RN)*V(RP,RN)/(R25*v(TR)*exp(((Z*v(TB)/(T0+abs(V(H))+TEMP)+Y*v(TB))/(T0+abs(V(H))+TEMP)+X*v(TB))/
++  (T0+TEMP+abs(V(H)))+W*v(TB))))}
+G_G5         RP RN VALUE { V(RP, RN)/V(AOUT) }
+G_G6         H 0 VALUE { V(H)*(Gth + Gth1*(TEMP-25)) }
+I_I1         0 AOUT DC 1Adc
+R_R1         0 AOUT  1T TC=0,0
+R_R2         0 H  1T TC=0,0
+C_C1         0 H  {Cth}
+.IC V(H)=0
+.ENDS
+*$
+
+*$
+.SUBCKT NTCS0402E3103_L1T RN Rp  PARAMS: TR=0 TB=0
+X114 Rn Rp NTC_BASE Params:
++ w=-11.1423334705573
++ x=2844.16925014123
++ y=241416.837060782
++ z=-29494710.26406
++ gth=0.0023 gth1 = 0.0000133
++ cth=0.0042
++ a=-11.1423334705573
++ r25=10000
++ b=2844.16925014123
++ c=241416.837060782
++ d=-29494710.26406
++ T0=273.15
++ TOLR=TR
++ TOLB=TB
+.ENDS
+*$

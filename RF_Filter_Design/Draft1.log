@@ -1,0 +1,45 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\Draft1.asc
+
+WARNING: Node NC_01 is floating.
+
+WARNING: Less than two connections to node NC_01.  This node is used by C1.
+WARNING: Less than two connections to node N008.  This node is used by S:U2:2.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-005
+Gmin = 1.6455e-006
+Gmin = 1.76685e-007
+Gmin = 1.89714e-008
+Gmin = 2.03704e-009
+Gmin = 2.18725e-010
+Gmin = 2.34854e-011
+Gmin = 2.52173e-012
+Gmin = 2.70769e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+
+Date: Wed Jun 03 14:41:25 2020
+Total elapsed time: 0.169 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3077
+traniter = 2350
+tranpoints = 1176
+accept = 1149
+rejected = 27
+matrix size = 136
+fillins = 152
+solver = Normal
+Thread vector: 5.9/4.9[2] 2.1/1.6[2] 0.9/0.8[1] 0.3/0.7[1]  2592/500
+Matrix Compiler1: 13.01 KB object code size  2.1/1.0/[0.6]
+Matrix Compiler2: 12.59 KB object code size  1.0/1.4/[0.6]
+

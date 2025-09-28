@@ -1,0 +1,48 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\TwoStage_80V_Boost_Converter.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-005
+Gmin = 1.6455e-006
+Gmin = 1.76685e-007
+Gmin = 1.89714e-008
+Gmin = 2.03704e-009
+Gmin = 2.18725e-010
+Gmin = 2.34854e-011
+Gmin = 2.52173e-012
+Gmin = 2.70769e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+Ignoring empty pin current: Ix(u3:2)
+Ignoring empty pin current: Ix(u3:4)
+Ignoring empty pin current: Ix(u3:2)
+Ignoring empty pin current: Ix(u3:4)
+Changing Tseed to 9.76562e-009
+Changing Tseed to 9.76563e-011
+Heightened Def Con from 0.0149254 to 0.0149254
+
+Date: Fri Aug 28 14:05:06 2020
+Total elapsed time: 45.039 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 6855131
+traniter = 6854732
+tranpoints = 1941173
+accept = 1433608
+rejected = 507564
+matrix size = 43
+fillins = 0
+solver = Normal
+Thread vector: 3.9/3.5[1] 2.2/1.7[3] 0.6/1.0[1] 0.1/0.4[1]  2592/500
+Matrix Compiler1: 1.29 KB object code size  0.3/0.2/[0.1]
+Matrix Compiler2: 2.36 KB object code size  0.2/0.3/[0.1]
+

@@ -1,0 +1,39 @@
+* Simple P-Channel MOSFET Model
+*If VSG > VTH, FET in cutoff and ID = 0
+*If VSG > VTH and VSD > VSG by VTH, FET in Active region of operation
+*If VSG > VSD by VTH, FET fully enhanced
+ 
+* External Node Designations
+* Node 1 -> Drain
+* Node 2 -> Gate
+* Node 3 -> Source
+ 
+.SUBCKT PWR_PMOS D G S
+E1 N001 G S G 1.0
+R2 G N002 1k
+D2 N001 N002 Dthreshold
+CGS G S {Cgs}
+CGD G D {Cgd}
+RO D_PRIME S 10k
+E2 OV 0 N002 G 1.0
+BI_IACTIVE S D_PRIME I={K*V(OV)*V(OV)}
+B2 N003 0 V={V(VSG)-V(VSD)}
+RDS D_PRIME D {Rdson}
+D1 N003 ENH Dthreshold
+R4 ENH 0 1k
+BI_ENHANCED D_PRIME S I={K*V(ENH)*V(ENH)}
+B1 VSG 0 V={V(S)-V(G)}
+B3 VSD 0 V={V(S)-V(D)}
+Dbody D_PRIME S Dbody
+R100 G 0 100Meg
+R101 D 0 100Meg
+R102 S 0 100Meg
+.param Vth = 4
+.param K = 10
+.param Cgs = 13n
+.param Cgd = 1n
+.param Rdson = 50m
+.model Dthreshold D(Ron=0 Roff=100Meg Vfwd={Vth})
+.model Dbody D(Ron=1 Roff=100k Vfwd=0.6)
+.backanno
+.end

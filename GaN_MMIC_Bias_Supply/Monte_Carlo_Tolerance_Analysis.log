@@ -1,0 +1,218 @@
+LTspice 24.0.9 for Windows
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\GaN_MMIC_Bias_Supply\Monte_Carlo_Tolerance_Analysis.asc
+Start Time: Wed Jun  5 23:40:13 2024
+solver = Normal
+Maximum thread count: 16
+
+
+
+WARNING: Less than two connections to node +5v.  This node is used by v1.
+WARNING: Less than two connections to node nc_01.  This node is used by vref_1.25v.
+.OP point found by inspection.
+Ignoring empty pin current: Ix(u1:1)
+Ignoring empty pin current: Ix(u1:2)
+Ignoring empty pin current: Ix(u1:1)
+Ignoring empty pin current: Ix(u1:2)
+.step x=0
+
+
+
+.step x=1
+
+
+
+.step x=2
+
+
+
+.step x=3
+
+
+
+.step x=4
+
+
+
+.step x=5
+
+
+
+.step x=6
+
+
+
+.step x=7
+
+
+
+.step x=8
+
+
+
+.step x=9
+
+
+
+.step x=10
+
+
+
+.step x=11
+
+
+
+.step x=12
+
+
+
+.step x=13
+
+
+
+.step x=14
+
+
+
+.step x=15
+
+
+
+.step x=16
+
+
+
+.step x=17
+
+
+
+.step x=18
+
+
+
+.step x=19
+
+
+
+.step x=20
+
+
+
+.step x=21
+
+
+
+.step x=22
+
+
+
+.step x=23
+
+
+
+.step x=24
+
+
+
+.step x=25
+
+
+
+.step x=26
+
+
+
+.step x=27
+
+
+
+.step x=28
+
+
+
+.step x=29
+
+
+
+.step x=30
+
+
+
+.step x=31
+
+
+
+.step x=32
+
+
+
+.step x=33
+
+
+
+.step x=34
+
+
+
+.step x=35
+
+
+
+.step x=36
+
+
+
+.step x=37
+
+
+
+.step x=38
+
+
+
+.step x=39
+
+
+
+.step x=40
+
+
+
+.step x=41
+
+
+
+.step x=42
+
+
+
+.step x=43
+
+
+
+.step x=44
+
+
+
+.step x=45
+
+
+
+.step x=46
+
+
+
+.step x=47
+
+
+
+.step x=48
+
+
+
+.step x=49
+tnom = 27
+temp = 27
+method = modified trap
+.step x=50
+Total elapsed time: 2.297 seconds.
+

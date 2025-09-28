@@ -1,0 +1,8 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\ADF4371_Phase_Noise_Sims\Draft2.asc
+
+Questionable use of curly braces in "b1 phase_noise_out n003 v={v(1_over_f_cubed)+v(1_over_f_squared)}"
+    Error: undefined symbol in: "[v](1_over_f_cubed)+v(1_over_f_squared)"
+Questionable use of curly braces in "b2 n003 0 v={v(1_over_f)+v(wideband)}"
+    Error: undefined symbol in: "[v](1_over_f)+v(wideband)"
+Fatal Error: Port(pin) count mismatch between the definition of subcircuit "cvss_945_xl_10_phase_noise_model" and instance: "xx1"
+The instance has more connection terminals than the definition.

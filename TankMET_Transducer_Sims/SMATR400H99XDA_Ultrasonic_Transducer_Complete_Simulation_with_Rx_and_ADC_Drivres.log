@@ -1,0 +1,49 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\TankMET_Transducer_Sims\SMATR400H99XDA_Ultrasonic_Transducer_Complete_Simulation_with_Rx_and_ADC_Drivres.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-005
+Gmin = 1.6455e-006
+Gmin = 1.76685e-007
+vernier = 0.5
+Gmin = 4.06622e-008
+vernier = 0.666667
+vernier = 0.888888
+Gmin = 8.52914e-009
+vernier = 1
+Gmin = 1.00195e-009
+Gmin = 1.07583e-010
+Gmin = 1.15517e-011
+Gmin = 1.24035e-012
+Gmin = 1.33182e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+Ignoring empty pin current: Ix(u1:5)
+Ignoring empty pin current: Ix(u1:5)
+Heightened Def Con from 0.0015 to 0.0015
+
+Date: Fri Jun 12 20:42:19 2020
+Total elapsed time: 1.730 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 64252
+traniter = 63623
+tranpoints = 20196
+accept = 14239
+rejected = 5958
+matrix size = 112
+fillins = 119
+solver = Normal
+Thread vector: 18.0/11.7[7] 4.8/2.9[7] 2.2/1.2[7] 0.4/1.2[1]  2592/500
+Matrix Compiler1: 11.51 KB object code size  1.9/0.8/[0.6]
+Matrix Compiler2: off  [0.7]/2.3/1.0
+

@@ -1,0 +1,63 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\Log_Current_Amp\Temp_Compensated_Log_Amp.asc
+
+WARNING: Less than two connections to node N003.  This node is used by E1.
+.step temp=-55°C
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-005
+Gmin = 1.6455e-006
+vernier = 0.5
+Gmin = 2.7607e-007
+vernier = 0.666667
+vernier = 0.333333
+Gmin = 1.20495e-007
+vernier = 0.444444
+vernier = 0.222222
+vernier = 0.296296
+Gmin = 7.29468e-008
+vernier = 0.148148
+vernier = 0.197531
+Gmin = 5.38683e-008
+vernier = 0.263374
+vernier = 0.351165
+Gmin = 2.81977e-008
+vernier = 0.46822
+Gmin = 1.03653e-008
+vernier = 0.624294
+vernier = 0.832392
+Gmin = 2.03827e-009
+vernier = 1
+Gmin = 2.34303e-010
+Gmin = 2.51581e-011
+Gmin = 2.70133e-012
+Gmin = 2.90053e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+.step temp=25°C
+.step temp=85°C
+
+Date: Thu Aug 19 22:26:07 2021
+Total elapsed time: 0.492 seconds.
+
+tnom = 27
+temp = 85
+method = trap
+totiter = 10473
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 47
+fillins = 49
+solver = Normal
+Thread vector: 5.6/4.8[3] 0.0/0.0[0] 1.6/1.2[3] 0.1/2.8[1]  2592/500
+Matrix Compiler1:     243 opcodes  0.7/0.4/[0.2]
+Matrix Compiler2: 4.52 KB object code size  0.5/0.4/[0.3]
+

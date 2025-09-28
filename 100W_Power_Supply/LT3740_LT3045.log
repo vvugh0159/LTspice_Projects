@@ -1,0 +1,40 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\100W_Power_Supply\LT3740_LT3045.asc
+
+Direct Newton iteration for .op point succeeded.
+Ignoring empty pin current: Ix(u3:2)
+Ignoring empty pin current: Ix(u3:2)
+Heightened Def Con from 0.00029058 to 0.000290583
+Heightened Def Con from 0.000303924 to 0.000303927
+Heightened Def Con from 0.000328739 to 0.000328742
+Heightened Def Con from 0.000394956 to 0.000394959
+Heightened Def Con from 0.000451237 to 0.00045124
+Heightened Def Con from 0.000471102 to 0.000471105
+Heightened Def Con from 0.000484345 to 0.000484348
+Heightened Def Con from 0.000487657 to 0.00048766
+Heightened Def Con from 0.000507524 to 0.000507527
+Heightened Def Con from 0.000510834 to 0.000510837
+Heightened Def Con from 0.000537322 to 0.000537325
+Heightened Def Con from 0.000583674 to 0.000583677
+Heightened Def Con from 0.000643274 to 0.000643277
+Heightened Def Con from 0.000669759 to 0.000669762
+Heightened Def Con from 0.000941265 to 0.00094128
+Heightened Def Con from 0.000978373 to 0.000978373
+
+Date: Tue Oct 19 20:26:43 2021
+Total elapsed time: 17.511 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 1019622
+traniter = 1019584
+tranpoints = 318052
+accept = 230758
+rejected = 87310
+matrix size = 76
+fillins = 34
+solver = Normal
+Thread vector: 7.9/5.4[3] 3.0/1.8[3] 1.0/0.7[3] 0.1/2.7[1]  2592/500
+Matrix Compiler1: 5.52 KB object code size  0.9/0.5/[0.3]
+Matrix Compiler2: 5.99 KB object code size  0.4/0.7/[0.3]
+

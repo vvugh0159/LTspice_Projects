@@ -1,0 +1,98 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\3V3_Low_Noise_LDO\LT3045_3V3_LDO.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+Gmin = 0.000604946
+vernier = 0.166667
+Gmin = 0.000422915
+vernier = 0.222222
+vernier = 0.296296
+Gmin = 0.000236884
+vernier = 0.395061
+vernier = 0.526748
+Gmin = 9.60012e-005
+vernier = 0.702331
+Gmin = 2.30345e-005
+vernier = 0.936441
+vernier = 1
+Gmin = 2.8397e-006
+vernier = 0.5
+vernier = 0.25
+Gmin = 1.21215e-006
+vernier = 0.333333
+vernier = 0.444444
+Gmin = 5.38034e-007
+vernier = 0.592592
+Gmin = 1.54096e-007
+vernier = 0.790123
+vernier = 1
+Gmin = 2.14009e-008
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+Gmin = 2.59405e-008
+vernier = 0.015625
+vernier = 0.0078125
+Gmin = 2.55887e-008
+vernier = 0.0104167
+vernier = 0.0138889
+Gmin = 2.48456e-008
+vernier = 0.0185185
+vernier = 0.0246913
+Gmin = 2.3706e-008
+vernier = 0.0329218
+Gmin = 2.20196e-008
+vernier = 0.0438957
+vernier = 0.0585276
+Gmin = 1.94597e-008
+vernier = 0.0780367
+vernier = 0.104049
+Gmin = 1.59907e-008
+vernier = 0.138732
+Gmin = 1.17601e-008
+vernier = 0.184976
+vernier = 0.246634
+Gmin = 7.05789e-009
+vernier = 0.328846
+vernier = 0.438461
+Gmin = 3.16583e-009
+vernier = 0.584614
+Gmin = 9.21173e-010
+vernier = 0.779486
+vernier = 1
+Gmin = 1.29651e-010
+Gmin = 1.39211e-011
+Gmin = 1.49477e-012
+Gmin = 1.605e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+Ignoring empty pin current: Ix(u1:2)
+
+Date: Sat Sep 25 02:08:38 2021
+Total elapsed time: 0.237 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 2296
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 29
+fillins = 13
+solver = Normal
+Matrix Compiler1:     113 opcodes
+Matrix Compiler2: off  [0.1]/0.3/0.2
+

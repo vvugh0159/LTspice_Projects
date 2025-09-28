@@ -1,0 +1,52 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\Log_Current_Amp\Log_Current_Amp_with_one_feedback_diode.asc
+
+Instance "m:u1:14": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:u1:12": Length shorter than recommended for a level 1 MOSFET.
+WARNING: Resistance changed sign due to its tempco(s).  Resistor:u1:r74
+.step temp=-40°C
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Increasing initial diagonal Gmin to 100
+Increasing initial diagonal Gmin to 1000
+Increasing initial diagonal Gmin to 10000
+Gmin = 10000
+Gmin = 1073.74
+Gmin = 115.292
+Gmin = 12.3794
+Gmin = 1.32923
+Gmin = 0.142725
+Gmin = 0.015325
+Gmin = 0.0016455
+Gmin = 0.000176685
+Gmin = 1.89714e-005
+Gmin = 2.03704e-006
+Gmin = 2.18725e-007
+Gmin = 2.34854e-008
+Gmin = 2.52173e-009
+Gmin = 2.70769e-010
+Gmin = 2.90735e-011
+Gmin = 3.12175e-012
+Gmin = 3.35195e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+.step temp=25°C
+.step temp=85°C
+
+Date: Fri Sep 18 15:03:31 2020
+Total elapsed time: 0.620 seconds.
+
+tnom = 27
+temp = 85
+method = trap
+totiter = 10818
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 52
+fillins = 38
+solver = Normal
+Matrix Compiler1:     199 opcodes  0.6/0.3/[0.2]
+Matrix Compiler2: 4.21 KB object code size  0.3/0.5/[0.2]
+

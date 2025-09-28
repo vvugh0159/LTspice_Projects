@@ -1,0 +1,19 @@
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\TankMET_Transducer_Sims\SMATR400H99XDA_Ultrasonic_Transducer_Power_Stage_Monte_Carlo_Sim.asc
+
+WARNING: Less than two connections to node VCC.  This node is used by V3.
+Direct Newton iteration for .op point succeeded.
+Ignoring empty pin current: Ix(u1:5)
+Ignoring empty pin current: Ix(u1:5)
+.step run=0
+.step run=1
+.step run=2
+.step run=3
+.step run=4
+.step run=5
+.step run=6
+.step run=7
+.step run=8
+.step run=9
+.step run=10
+.step run=11
+.step run=12

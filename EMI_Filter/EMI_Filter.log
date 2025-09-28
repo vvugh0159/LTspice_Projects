@@ -1,0 +1,15 @@
+LTspice 24.0.9 for Windows
+Circuit: * C:\Users\Vien\Documents\LTspice_Projects\EMI_Filter\EMI_Filter.asc
+Start Time: Fri Mar  8 00:46:50 2024
+solver = Normal
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = modified trap
+WARNING: Node NC_01 is floating.
+WARNING: Node N050 is floating.
+
+WARNING: Less than two connections to node nc_01.  This node is used by r16.
+Direct Newton iteration for .op point succeeded.
+Total elapsed time: 0.274 seconds.
+

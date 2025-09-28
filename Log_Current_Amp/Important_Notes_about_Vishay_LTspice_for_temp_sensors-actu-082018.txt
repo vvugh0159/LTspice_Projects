@@ -1,0 +1,57 @@
+********************************
+* Copyright:                   *
+* Vishay Intertechnology, Inc. *
+********************************
+21 Aug 2018
+
+
+Vishay LT spice for RTD (TFPT, PTS) and NTC thermistors
+*******************************************************
+
+concerned data sheets
+
+* PTS : http://www.vishay.com/docs/28762/ptsserie.pdf
+* PTS AT: http://www.vishay.com/docs/28899/ptsat.pdf
+* TFPT : www.vishay.com/docs/33017/tfpt.pdf
+* NTCLE100 : http://www.vishay.com/thermistors/list/product-29049/
+* NTCLE101 : http://www.vishay.com/thermistors/list/product-29046/ and 29152
+* NTCLE203 :http://www.vishay.com/thermistors/list/product-29048/ and 29118
+* NTCS0402:http://www.vishay.com/thermistors/list/product-29003/
+* NTCS0603:http://www.vishay.com/thermistors/list/product-29056/
+* NTCS0805:http://www.vishay.com/thermistors/list/product-29044/
+
+1) The models are primarily designed for LT spice IV and for LT spice XVII 64 bits
+
+2) all symbols have been created for each subcircuit.They can be found in the directory toogether with the .lib file.
+
+3) A simulation file (simulation_LT_therm_Vishay.asc and the plot files)is joined in this archive where the user can reproduce some simulations presented in the Vishay technical note.  
+
+http://www.vishay.com/docs/29170/ltspice.pdf 
+
+4) tolerances of the electrical characteristics of components:
+
+the tolerances are modelled according to Monte Carlo distribution via the following parameters
+
+The default value is 0 (nominal curve) and they can be fixed by the user as follows according to data sheet preferentially.
+
+NTC Thermistor
+**************
+TR = tolerance on R25  can be set at 1,2,3 or 5 (standing for +/- 1,2,3 or 5%)
+TB = tolerance on B25/85 can be set at 0.5 ,0.75 ,1,3  (standing for +/- 0.5 , 0.75,1 ,3 %)
+
+TFPT RTD 
+********
+TOLR25 = tolerance on R25 can be set at 0.5 ,1 or 5 (standing for +/- 0.5, 1 or 5  %)
+TOLSLOPE = 0 or 1 (for TOLSLOPE= 1 : the whole temperature coefficient uncertainty will be covered /for TOLSLOPE = 0 : the tolerance of the slope is set at 0)
+
+PTS Platinum 
+************
+TOL0 is expressed in °C and TOLS in °C/°C
+
+TOL0 = 0.3 must be coupled with TOLS= 0.005  
+
+or 
+
+TOL0 = 0.6 must be coupled TolS = 0.01
+ 
+in order to reproduce the class B abnd 2B

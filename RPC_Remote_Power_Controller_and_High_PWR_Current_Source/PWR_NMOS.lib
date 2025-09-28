@@ -1,0 +1,36 @@
+* Simple N-Channel MOSFET Model
+*If VGS < VTH, FET in cutoff and ID = 0
+*If VGS < VTH and VDS > VGS by VTH, FET in Active region of operation
+*If VGS > VDS by VTH, FET fully enhanced
+ 
+* External Node Designations
+* Node 1 -> Drain
+* Node 2 -> Gate
+* Node 3 -> Source
+ 
+.SUBCKT PWR_NMOS D G S
+E1 N001 S G S 1.0
+R2 S N002 1k
+D2 N001 N002 Dthreshold
+CGS S G {Cgs}
+CGD G D {Cgd}
+RO S D_PRIME 10k
+E2 OV 0 N002 S 1.0
+BI_IACTIVE D_PRIME S I={K*V(OV)*V(OV)}
+B2 N003 0 V={V(VGS)-V(VDS)}
+RDS D D_PRIME {Rdson}
+D1 N003 ENH Dthreshold
+R4 ENH 0 1k
+BI_ENHANCED S D_PRIME I={K*V(ENH)*V(ENH)}
+B1 VGS 0 V={V(G)-V(S)}
+B3 VDS 0 V={V(D)-V(S)}
+Dbody S D Dbody
+.param Vth = 4
+.param K = 10
+.param Cgs = 13n
+.param Cgd = 1n
+.param Rdson = 50m
+.model Dthreshold D(Ron=0 Roff=100Meg Vfwd={Vth})
+.model Dbody D(Ron=1 Roff=100k Vfwd=0.6)
+.backanno
+.end
