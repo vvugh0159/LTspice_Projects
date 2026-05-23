@@ -1,0 +1,351 @@
+.subckt UC1825 INV NI EA_OUT CLK RT CT RAMP SS ILIM_SD GRND OUT_A PWR_GND VC OUT_B VCC VREF_5.1V
+X§U1 N020 GRND ADR5043 ;§pnba 1)2
+Q3 N017 N017 N020 0 NPN
+Q4 N005 N017 RT 0 NPN
+Q5 N005 N005 VCC 0 PNP
+Q6 VCC N003 N009 0 NPN
+Q7 N003 N009 N017 0 NPN
+R2 N009 N017 10k
+R3 VCC N003 10k
+R4 GRND 0 10G
+Q1 CT N005 VCC 0 PNP
+X§U2 N035 N020 VREF_5.1V GRND N026 LTC6752 ;§pnba +In)-In)VCC)VEE)Q
+Q2 CT N034 N037 0 NPN
+R5 N026 N034 2k
+R6 CT N035 10k
+R7 N035 N026 45k
+R8 N037 GRND 50
+X§U3 N023 GRND LT1634-5 ;§pnba VCC)VEE
+Q8 N008 N015 N019 0 NPN
+Q9 N015 N019 N023 0 NPN
+R9 N019 N023 10k
+R10 N008 N015 10k
+E1 VREF_5.1V GRND N023 GRND {5.1/5.0}
+Q11 VREF_5.1V N025 CLK 0 NPN
+R12 N026 N025 2k
+M1 Q N022 GRND GRND CMOSN l={Lmin} w={Wn}
+M2 Q N029 GRND GRND CMOSN l={Lmin} w={Wn}
+M3 VREF_5.1V N022 P001 VREF_5.1V CMOSP l={Lmin} w={Wp}
+M4 P001 N029 Q VREF_5.1V CMOSP l={Lmin} w={Wp}
+M5 N029 Q GRND GRND CMOSN l={Lmin} w={Wn}
+M6 N029 SET GRND GRND CMOSN l={Lmin} w={Wn}
+M7 VREF_5.1V Q P002 VREF_5.1V CMOSP l={Lmin} w={Wp}
+M8 P002 SET N029 VREF_5.1V CMOSP l={Lmin} w={Wp}
+R13 N022 CLK 10m
+R14 SET N048 10m
+M9 N030 Q GRND GRND CMOSN l={Lmin} w={Wn}
+M10 N030 RESET GRND GRND CMOSN l={Lmin} w={Wn}
+M11 VREF_5.1V Q P003 VREF_5.1V CMOSP l={Lmin} w={Wp}
+M12 P003 RESET N030 VREF_5.1V CMOSP l={Lmin} w={Wp}
+M13 N031 N030 GRND GRND CMOSN l={Lmin} w={Wn}
+M14 VREF_5.1V N030 N031 VREF_5.1V CMOSP l={Lmin} w={Wp}
+A1 N028 0 N031 0 0 N024 N021 0 DFLOP Vlow=0.05, Vhigh=4.95, Td=10n, Trise=10n, Tfall=10n
+A2 0 VREF_5.1V 0 N021 0 0 N028 0 XOR Vlow=0.05, Vhigh=4.95, Td=10n, Trise=10n, Tfall=10n
+M15 PRE_GATE_DRV_A N021 GRND GRND CMOSN l={Lmin} w={Wn}
+M16 PRE_GATE_DRV_A N031 GRND GRND CMOSN l={Lmin} w={Wn}
+M17 VREF_5.1V N021 P004 VREF_5.1V CMOSP l={Lmin} w={Wp}
+M18 P004 N031 PRE_GATE_DRV_A VREF_5.1V CMOSP l={Lmin} w={Wp}
+M19 PRE_GATE_DRV_B N024 GRND GRND CMOSN l={Lmin} w={Wn}
+M20 PRE_GATE_DRV_B N031 GRND GRND CMOSN l={Lmin} w={Wn}
+M21 VREF_5.1V N024 P005 VREF_5.1V CMOSP l={Lmin} w={Wp}
+M22 P005 N031 PRE_GATE_DRV_B VREF_5.1V CMOSP l={Lmin} w={Wp}
+M23 N046 N042 GRND GRND CMOSN l={Lmin} w={Wn}
+M24 N046 ILIM_CMPRTR GRND GRND CMOSN l={Lmin} w={Wn}
+M25 VREF_5.1V N042 P006 VREF_5.1V CMOSP l={Lmin} w={Wp}
+M26 P006 ILIM_CMPRTR N046 VREF_5.1V CMOSP l={Lmin} w={Wp}
+M27 N048 N046 GRND GRND CMOSN l={Lmin} w={Wn}
+M28 VREF_5.1V N046 N048 VREF_5.1V CMOSP l={Lmin} w={Wp}
+R15 ILIM_CMPRTR GRND 100k
+R16 RESET N022 10m
+X§U6 N043 EA_OUT VREF_5.1V GRND N042 LTC6752 ;§pnba +In)-In)VCC)VEE)Q
+Q12 VCC N041 N044 0 NPN
+Q13 N041 N044 N047 0 NPN
+R17 N044 N047 10k
+R18 VCC N041 10k
+E2 N043 N049 N047 GRND 1.0
+X§U8 N047 GRND LT1634-1.25 ;§pnba VCC)VEE
+E3 N049 GRND RAMP GRND 1.0
+R19 RAMP GRND 100k
+Q10 VCC N004 N011 0 NPN
+Q14 N004 N011 N018 0 NPN
+R11 N011 N018 10k
+R23 VCC N004 10k
+Q15 N018 N018 N039 0 NPN
+X§U9 N039 GRND LT1634-1.25 ;§pnba VCC)VEE
+Q16 CLK N018 N040 0 NPN
+R24 N040 GRND {1.25/400u}
+R20 PWR_GND GRND 10Meg
+E4 REF_1V GRND N047 GRND {1.0/1.25}
+E5 REF_1.4V GRND N047 GRND {1.4/1.25}
+X§U10 ILIM_SD REF_1V VREF_5.1V GRND ILIM_CMPRTR LTC6752 ;§pnba +In)-In)VCC)VEE)Q
+X§U11 ILIM_SD REF_1.4V VREF_5.1V GRND SHDN_CMPRTR LTC6752 ;§pnba +In)-In)VCC)VEE)Q
+R1 ILIM_SD GRND 50k
+D1 GRND VCC_UVLO_CMPRTR CDZV10B
+Q17 VCC N006 N012 0 NPN
+Q18 N006 N012 VCC_UVLO_CMPRTR 0 NPN
+R21 N012 VCC_UVLO_CMPRTR 10k
+R22 VCC N006 10k
+X§U12 VCC UVLO_REF_9V VCC_UVLO_CMPRTR GRND REF5V1_EN_SW_CTL LTC6752 ;§pnba +In)-In)VCC)VEE)Q
+Q19 VCC N007 N013 0 NPN
+Q20 N007 N013 N016 0 NPN
+R25 N013 N016 10k
+R26 VCC N007 10k
+X§U13 N016 GRND ADR5043 ;§pnba 1)2
+E6 UVLO_REF_9V GRND N016 GRND 3.0
+R27 N023 GRND 10Meg
+M29 P007 VREF_GOOD GRND GRND CMOSN l={Lmin} w={Wn}
+M30 OUTPUT_INH UVLO_OUT P007 GRND CMOSN l={Lmin} w={Wn}
+M31 VREF_5.1V VREF_GOOD OUTPUT_INH VREF_5.1V CMOSP l={Lmin} w={Wp}
+M32 VREF_5.1V UVLO_OUT OUTPUT_INH VREF_5.1V CMOSP l={Lmin} w={Wp}
+X§U14 VREF_5.1V VREF_5V1_GOOD_THRES VCC_UVLO_CMPRTR GRND N045 LTC6752 ;§pnba +In)-In)VCC)VEE)Q
+X§U15 N027 GRND ADR5043 ;§pnba 1)2
+R28 VCC_UVLO_CMPRTR N027 5k
+E7 VREF_5V1_GOOD_THRES GRND N027 GRND {4.0/3.0}
+R31 N038 GRND 10k
+R32 N010 N036 10k
+Q21 N038 N036 N010 0 PNP
+Q22 GRND N038 N036 0 PNP
+Q23 N010 N010 N002 0 PNP
+X§U16 VCC N002 ADR5043 ;§pnba 1)2
+Q24 SS N010 N001 0 PNP
+R33 VCC N001 {3/9u}
+Q25 SS N032 GRND 0 NPN
+R34 N032 GRND 100k
+R35 SHDN_CMPRTR N032 5k
+R36 OUTPUT_INH N032 5k
+M33 OUTPUT_EN OUTPUT_INH GRND GRND CMOSN l={Lmin} w={Wn}
+M34 VREF_5.1V OUTPUT_INH OUTPUT_EN VREF_5.1V CMOSP l={Lmin} w={Wp}
+R29 EN_OUTA OUTPUT_EN 1k
+R30 EN_OUTB OUTPUT_EN 1k
+S1 N008 VCC REF5V1_EN_SW_CTL GRND SW
+S2 N014 PRE_GATE_DRV_A EN_OUTA GRND SW
+S3 N033 PRE_GATE_DRV_B EN_OUTB GRND SW
+X§U4 N014 OUT_A VC PWR_GND OUT_A GATE_DRVR_OUTP_ALT ;§pnba In+)In-)V+)V-)OUT
+X§U5 N033 OUT_B VC PWR_GND OUT_B GATE_DRVR_OUTP_ALT ;§pnba In+)In-)V+)V-)OUT
+X§U7 NI INV VCC GRND EA_OUT EA ;§pnba In+)In-)V+)V-)OUT
+R37 N045 VREF_GOOD 1k
+R38 REF5V1_EN_SW_CTL UVLO_OUT 1k
+.model D D
+.lib standard.dio
+.model NPN NPN
+.model PNP PNP
+.lib standard.bjt
+.model NMOS NMOS
+.model PMOS PMOS
+.lib standard.mos
+.MODEL CMOSP PMOS (                                LEVEL   = 49
++VERSION = 3.1            TNOM    = 27             TOX     = 4.1E-9
++XJ      = 1E-7           NCH     = 4.1589E17      VTH0    = -0.3906012
++K1      = 0.5341312      K2      = 0.0395326      K3      = 0
++K3B     = 7.4916211      W0      = 1E-6           NLX     = 1.194072E-7
++DVT0W   = 0              DVT1W   = 0              DVT2W   = 0
++DVT0    = 0.5060555      DVT1    = 0.2423835      DVT2    = 0.1
++U0      = 115.6894042    UA      = 1.573746E-9    UB      = 1.874308E-21
++UC      = -1E-10         VSAT    = 1.130982E5     A0      = 1.9976555
++AGS     = 0.4186945      B0      = 1.949178E-7    B1      = 6.422908E-7
++KETA    = 0.0166345      A1      = 0.4749146      A2      = 0.300003
++RDSW    = 198.321294     PRWG    = 0.5            PRWB    = -0.4986647
++WR      = 1              WINT    = 0              LINT    = 2.94454E-8
++XL      = 0              XW      = -1E-8          DWG     = -2.798724E-8
++DWB     = -4.83797E-10   VOFF    = -0.095236      NFACTOR = 2
++CIT     = 0              CDSC    = 2.4E-4         CDSCD   = 0
++CDSCB   = 0              ETA0    = 1.035504E-3    ETAB    = -4.358398E-4
++DSUB    = 1.816555E-3    PCLM    = 1.3299898      PDIBLC1 = 1.766563E-3
++PDIBLC2 = 7.728395E-7    PDIBLCB = -1E-3          DROUT   = 1.011891E-3
++PSCBE1  = 4.872184E10    PSCBE2  = 5E-10          PVAG    = 0.0209921
++DELTA   = 0.01           RSH     = 7.7            MOBMOD  = 1
++PRT     = 0              UTE     = -1.5           KT1     = -0.11
++KT1L    = 0              KT2     = 0.022          UA1     = 4.31E-9
++UB1     = -7.61E-18      UC1     = -5.6E-11       AT      = 3.3E4
++WL      = 0              WLN     = 1              WW      = 0
++WWN     = 1              WWL     = 0              LL      = 0
++LLN     = 1              LW      = 0              LWN     = 1
++LWL     = 0              CAPMOD  = 2              XPART   = 0.5
++CGDO    = 6.35E-10       CGSO    = 6.35E-10       CGBO    = 1E-12
++CJ      = 1.144521E-3    PB      = 0.8468686      MJ      = 0.4099522
++CJSW    = 2.490749E-10   PBSW    = 0.8769118      MJSW    = 0.3478565
++CJSWG   = 4.22E-10       PBSWG   = 0.8769118      MJSWG   = 0.3478565
++CF      = 0              PVTH0   = 2.302018E-3    PRDSW   = 9.0575312
++PK2     = 1.821914E-3    WKETA   = 0.0222457      LKETA   = -1.495872E-3
++PU0     = -1.5580645     PUA     = -6.36889E-11   PUB     = 1E-21
++PVSAT   = 49.8420442     PETA0   = 2.827793E-5    PKETA   = -2.536564E-3
++ NOIMOD=2.0E+00                                NOIA=3.57456993317604E+18                       NOIB=2500
++ NOIC=2.61260020285845E-11     EF=1.1388                                                       EM=41000000 )
+*
+*
+* flicker noise parameters above added manually from some other process
+*
+.param Lmin={1*180n}
+.param Wn = 5*Lmin
+.param Wp = 1.5*Wn
+*  T58F SPICE BSIM3 VERSION 3.1 PARAMETERS
+*
+* SPICE 3f5 Level 8, Star-HSPICE Level 49, UTMOST Level 8
+*
+* DATE: Oct 31/05
+* LOT: T58F                  WAF: 9005
+* Temperature_parameters=Default
+.MODEL CMOSN NMOS (                                LEVEL   = 49
++VERSION = 3.1            TNOM    = 27             TOX     = 4.1E-9
++XJ      = 1E-7           NCH     = 2.3549E17      VTH0    = 0.3662473
++K1      = 0.5864999      K2      = 1.127266E-3    K3      = 1E-3
++K3B     = 0.0294061      W0      = 1E-7           NLX     = 1.630684E-7
++DVT0W   = 0              DVT1W   = 0              DVT2W   = 0
++DVT0    = 1.2064649      DVT1    = 0.4215486      DVT2    = 0.0197749
++U0      = 273.8094484    UA      = -1.40499E-9    UB      = 2.408323E-18
++UC      = 6.504826E-11   VSAT    = 1.355009E5     A0      = 2
++AGS     = 0.4449958      B0      = 1.901075E-7    B1      = 4.99995E-6
++KETA    = -0.0164863     A1      = 3.868769E-4    A2      = 0.4640272
++RDSW    = 123.3376355    PRWG    = 0.5            PRWB    = -0.197728
++WR      = 1              WINT    = 0              LINT    = 1.690044E-8
++XL      = 0              XW      = -1E-8          DWG     = -4.728719E-9
++DWB     = -2.452411E-9   VOFF    = -0.0948017     NFACTOR = 2.1860065
++CIT     = 0              CDSC    = 2.4E-4         CDSCD   = 0
++CDSCB   = 0              ETA0    = 2.230928E-3    ETAB    = 6.028975E-5
++DSUB    = 0.0145467      PCLM    = 1.3822069      PDIBLC1 = 0.1762787
++PDIBLC2 = 1.66653E-3     PDIBLCB = -0.1           DROUT   = 0.7694691
++PSCBE1  = 8.91287E9      PSCBE2  = 7.349607E-9    PVAG    = 1.685917E-3
++DELTA   = 0.01           RSH     = 6.7            MOBMOD  = 1
++PRT     = 0              UTE     = -1.5           KT1     = -0.11
++KT1L    = 0              KT2     = 0.022          UA1     = 4.31E-9
++UB1     = -7.61E-18      UC1     = -5.6E-11       AT      = 3.3E4
++WL      = 0              WLN     = 1              WW      = 0
++WWN     = 1              WWL     = 0              LL      = 0
++LLN     = 1              LW      = 0              LWN     = 1
++LWL     = 0              CAPMOD  = 2              XPART   = 0.5
++CGDO    = 8.23E-10       CGSO    = 8.23E-10       CGBO    = 1E-12
++CJ      = 9.466429E-4    PB      = 0.8            MJ      = 0.3820266
++CJSW    = 2.608154E-10   PBSW    = 0.8            MJSW    = 0.102322
++CJSWG   = 3.3E-10        PBSWG   = 0.8            MJSWG   = 0.102322
++CF      = 0              PVTH0   = -2.199373E-3   PRDSW   = -0.9368961
++PK2     = 1.593254E-3    WKETA   = -2.880976E-3   LKETA   = 7.165078E-3
++PU0     = 6.777519       PUA     = 5.505418E-12   PUB     = 8.84133E-25
++PVSAT   = 2.006286E3     PETA0   = 1.003159E-4    PKETA   = -6.759277E-3
++NOIMOD=2.0E+00                 NOIA=1.3182567385564E+19
++NOIB=144543.977074592 NOIC=-1.24515784572817E-12               EF=0.92 EM=41000000 )
+* NOR GATE
+* NOR GATE
+* SR LATCH
+* CLK GEN WITH\n400uA TAIL CURRENT
+* OR GATE
+* TOGGLE FLIP FLOP
+* NOR GATE
+* NOR GATE
+* Use with opamp2 symbol
+.subckt EA IN+ IN- V+ V- OUT
+Q1 N004 IN- N010 0 NPN_EA
+Q2 N006 IN+ N010 0 NPN_EA
+Q3 N010 N007 N014 0 NPN_EA
+Q4 V+ N002 N003 0 NPN_EA
+Q5 N002 N003 N007 0 NPN_EA
+R1 N003 N007 5k
+R2 V+ N002 5k
+X§U2 N012 V- LT1004-1.2 ;§pnba VOUT)GND
+Q6 N007 N007 N012 0 NPN_EA
+Q7 N001 N007 N013 0 NPN_EA
+R3 N013 V- {Vref_EA/Ibias_EA}
+R5 N014 V- {Vref_EA/Ibias_EA}
+Q10 N001 N001 V+ 0 PNP_EA
+Q11 N011 N011 V- 0 NPN_EA
+Q12 N008 N011 V- 0 NPN_EA
+Q13 N009 N008 V- 0 NPN_EA
+R6 N004 N011 5k
+R7 N006 N008 5k
+Q14 N004 N001 V+ 0 PNP_EA
+Q15 N006 N001 V+ 0 PNP_EA
+Q16 N005 N005 N009 0 NPN_EA
+Q17 N005 N001 V+ 0 PNP_EA
+Q18 VREF_5.1V N005 OUT 0 NPN_EA
+R8 OUT N009 200
+R12 N009 V- 50k
+C1 N009 N008 100p
+R4 V- 0 10G
+E1 VREF_5.1V V- N012 V- {5.1/{Vref_EA}}
+.model NPN NPN
+.model PNP PNP
+.lib standard.bjt
+.model NPN_EA NPN(IS=1E-14 VAF=100 BF=200 IKF=0.3 XTB=1.5
++BR=3 CJC=3E-12 CJE=10E-12 TR=250E-12 TF=250E-12
++ITF=1 VTF=2 XTF=3 RB=10 RC=.3 RE=.2 Vceo=30 Icrating=800m mfg=NXP)
+.model PNP_EA PNP(IS=1E-14 VAF=120 BF=250 IKF=0.3
++XTB=1.5 BR=3 CJC=3E-12 CJE=10E-12 TR=250E-12
++TF=250E-12 ITF=1 VTF=2 XTF=3 RB=10 RC=.3 RE=.2
++Vceo=40 Icrating=600m mfg=NXP)
+.param Vref_EA=1.2
+.param Ibias_EA=1m
+.lib LTC3.lib
+.backanno
+.end
+* Output Driver Stage Model
+* Use with opamp2 model
+* IN- Terminal floating. Can be connected to OUT
+.subckt GATE_DRVR_OUTP IN+ IN- V+ V- OUT
+Q2 V+ N001 N002 0 NPN_DRVR
+Q3 V+ N002 OUT 0 NPN_DRVR
+D2 OUT N001 1N4148
+E1 N004 V- N003 V- 1.0
+R5 IN+ V- 10k
+R6 OUT V- 10k
+R4 V+ N001 50
+Q5 N003 N007 V- 0 NPN_DRVR
+R7 V+ N003 10k
+E3 N007 V- IN+ V- 1.0
+R9 N005 N004 50
+Q1 OUT N006 V- 0 NPN_DRVR
+Q4 N001 N005 N006 0 NPN_DRVR
+Q6 N006 N008 P001 0 NPN_DRVR
+R1 V+ N008 10k
+R2 P001 V- 50
+R3 V- 0 10G
+R8 IN- V- 10G
+.model D D
+.lib standard.dio
+.model NPN NPN
+.model PNP PNP
+.lib standard.bjt
+.model NPN_DRVR NPN(IS=1E-14 VAF=100 BF=200 IKF=0.3 XTB=1.5 BR=3 CJC=3E-12 CJE=10E-12 TR=100E-12
++TF=100E-12 ITF=1 VTF=2 XTF=3 RB=10 RC=.3 RE=.2 Vceo=30 Icrating=800m mfg=NXP)
+.model PNP1 PNP(IS=1E-14 VAF=120 BF=250 IKF=0.3 XTB=1.5 BR=3 CJC=3E-12 CJE=10E-12 TR=100E-12
++TF=100E-12 ITF=1 VTF=2 XTF=3 RB=10 RC=.3 RE=.2 Vceo=40 Icrating=600m mfg=NXP)
+.backanno
+.end
+* OR GATE
+* Output Driver Stage Model
+* Use with opamp2 model
+* IN- Terminal floating. Can be connected to OUT
+.subckt GATE_DRVR_OUTP_ALT IN+ IN- V+ V- OUT
+Q2 V+ N001 N002 0 NPN_DRVR_ALT
+Q3 V+ N002 OUT 0 NPN_DRVR_ALT
+D2 N001 N003 1N4148
+E1 N005 V- N004 V- 1.0
+R5 IN+ V- 10k
+Q1 V- N007 OUT 0 PNP_DRVR_ALT
+Q4 V- N006 N007 0 PNP_DRVR_ALT
+D3 N003 N006 1N4148
+R3 N006 V- 1k
+R4 V+ N001 1k
+Q5 N004 N008 V- 0 NPN_DRVR_ALT
+R7 V+ N004 10k
+E3 N008 V- IN+ V- 1.0
+R9 N006 N005 50
+R1 V- 0 10G
+R2 IN- V- 10G
+.model D D
+.lib standard.dio
+.model NPN NPN
+.model PNP PNP
+.lib standard.bjt
+.model NPN_DRVR_ALT NPN(IS=1E-14 VAF=100 BF=200 IKF=0.3 XTB=1.5 BR=3 CJC=3E-12 CJE=10E-12 TR=250E-12 TF=250E-12 ITF=1 VTF=2 XTF=3 RB=10 RC=.3 RE=.2 Vceo=30 Icrating=800m mfg=NXP)
+.model PNP_DRVR_ALT PNP(IS=1E-14 VAF=120 BF=250 IKF=0.3 XTB=1.5 BR=3 CJC=3E-12 CJE=10E-12 TR=250E-12 TF=250E-12 ITF=1 VTF=2 XTF=3 RB=10 RC=.3 RE=.2 Vceo=40 Icrating=600m mfg=NXP)
+.backanno
+.end
+.model SW SW(Ron=1m, Roff=10G, Vt=1.0, Vh=-0.05)
+* NAND GATE
+* 9uA Soft-Start Current
+* UVLO and 5.1V "Ref Good" Detect Circuit
+.lib ADR5043.sub
+.lib LTC3.lib
+.lib LTC7.lib
+.backanno
+.end
+

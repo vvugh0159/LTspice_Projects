@@ -1,0 +1,10 @@
+.options
++ Gmin = 1e-07
++ Abstol = 1e-7
++ Reltol = 0.001
++ Chgtol = 1e-12
++ Trtol = 2
++ vntol = 0.0001
++ Sstol = 0.001
++ MinDeltaGmin = 0.0001
++ Method = Gear

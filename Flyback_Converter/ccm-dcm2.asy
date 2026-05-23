@@ -1,0 +1,25 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal 48 48 -48 -48
+TEXT -80 -48 Left 2 D
+TEXT -80 48 Left 2 S
+TEXT 80 48 Right 2 K
+TEXT 80 -48 Right 2 A
+TEXT -16 112 VLeft 2 duty
+SYMATTR Prefix X
+SYMATTR Value ccm-dcm2
+PIN -48 -32 LEFT 8
+PINATTR PinName 1
+PINATTR SpiceOrder 1
+PIN -48 32 LEFT 8
+PINATTR PinName 2
+PINATTR SpiceOrder 2
+PIN 48 32 RIGHT 8
+PINATTR PinName 3
+PINATTR SpiceOrder 3
+PIN 48 -32 RIGHT 8
+PINATTR PinName 4
+PINATTR SpiceOrder 4
+PIN 0 48 VLEFT 8
+PINATTR PinName 5
+PINATTR SpiceOrder 5
