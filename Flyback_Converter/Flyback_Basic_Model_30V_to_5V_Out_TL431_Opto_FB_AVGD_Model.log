@@ -1,0 +1,42 @@
+LTspice 26.0.2 for Windows
+Circuit: C:\Users\vvuon\Documents\LTspice_Projects\Flyback_Converter\Flyback_Basic_Model_30V_to_5V_Out_TL431_Opto_FB_AVGD_Model.net
+Start Time: Mon May 25 18:31:23 2026
+Options:Gmin = 1e-10
++ Abstol = 1e-10
++ Reltol = 0.001
++ Chgtol = 1e-11
++ Trtol = 2
++ vntol = 0.0001
++ Sstol = 0.001
++ MinDeltaGmin = 0.0001
++ Method = Gear
+solver = Alternate
+Maximum thread count: 22
+tnom = 27
+temp = 27
+method = Gear
+gmin = 1e-10
+abstol = 1e-10
+chgtol = 1e-11
+volttol = 0.0001
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0
+Singular matrix:  Check node u2:n008
+   Iteration No. 168
+Singular matrix:  Check nodes u and u2:n008
+   Iteration No. 1
+Starting source stepping with srcstepmethod=1
+Failed to find DC operating point for AC analysis.
+
+Simulation stopped by user.
+Total elapsed time: 382.982 seconds.
+
+Files loaded:
+C:\Users\vvuon\Documents\LTspice_Projects\Flyback_Converter\Flyback_Basic_Model_30V_to_5V_Out_TL431_Opto_FB_AVGD_Model.net
+C:\Users\vvuon\AppData\Local\LTspice\lib\cmp\standard.dio
+C:\Users\vvuon\AppData\Local\LTspice\lib\cmp\standard.bjt
+C:\Users\vvuon\AppData\Local\LTspice\lib\sub\LTC.lib
+C:\Users\vvuon\AppData\Local\LTspice\lib\sub\LTC5.lib
+
