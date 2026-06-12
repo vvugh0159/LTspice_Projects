@@ -1,0 +1,56 @@
+LTspice 24.1.10 for Windows
+Circuit: C:\Users\vvuon\Documents\LTspice_Projects\Flyback_Converter\Demo_Flyback_Transient_Model.net
+Start Time: Fri Jun 12 02:20:36 2026
+Options:
++ Gmin = 1e-7
++ Abstol = 1e-7
++ Reltol = 0.001
++ Chgtol = 1e-8
++ Trtol = 2
++ vntol = 0.001
++ Sstol = 0.001
++ MinDeltaGmin = 0.0001
++ Method = Gear
+solver = Alternate
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = Gear
+gmin = 1e-07
+abstol = 1e-07
+chgtol = 1e-08
+volttol = 0.001
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+Gmin = 0.488672
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+Gmin = 0.46295
+vernier = 0.0078125
+vernier = 0.00390625
+vernier = 0.00195312
+vernier = 0.000976562
+vernier = 0.000488281
+Gmin = 0.464305
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+
+Simulation stopped by user.
+Total elapsed time: 614.791 seconds.
+
+Files loaded:
+C:\Users\vvuon\Documents\LTspice_Projects\Flyback_Converter\Demo_Flyback_Transient_Model.net
+C:\Users\vvuon\AppData\Local\LTspice\lib\cmp\standard.dio
+C:\Users\vvuon\AppData\Local\LTspice\lib\cmp\standard.bjt
+C:\Users\vvuon\AppData\Local\LTspice\lib\cmp\standard.mos
+C:\Users\vvuon\Documents\LTspice_Projects\Flyback_Converter\dc_operating_point.txt
+C:\Users\vvuon\AppData\Local\LTspice\lib\sub\LT1245.sub
+C:\Users\vvuon\AppData\Local\LTspice\lib\sub\LTC.lib
+

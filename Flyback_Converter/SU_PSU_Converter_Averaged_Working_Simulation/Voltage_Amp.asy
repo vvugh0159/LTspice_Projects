@@ -1,0 +1,31 @@
+Version 4
+SymbolType BLOCK
+LINE Normal -16 32 -16 -32
+LINE Normal 48 0 -16 -32
+LINE Normal -16 32 48 0
+LINE Normal 0 -16 -8 -16
+LINE Normal 0 16 -8 16
+LINE Normal -4 20 -4 12
+LINE Normal 31 -20 23 -20
+LINE Normal 27 -16 27 -24
+LINE Normal 31 16 23 16
+TEXT 57 17 Left 2 Rtn
+WINDOW 0 115 -15 Bottom 2
+PIN -16 16 NONE 8
+PINATTR PinName IN+
+PINATTR SpiceOrder 1
+PIN -16 -16 NONE 8
+PINATTR PinName IN-
+PINATTR SpiceOrder 2
+PIN 16 -16 NONE 8
+PINATTR PinName Max
+PINATTR SpiceOrder 3
+PIN 16 16 NONE 8
+PINATTR PinName Min
+PINATTR SpiceOrder 4
+PIN 48 0 NONE 8
+PINATTR PinName Out
+PINATTR SpiceOrder 5
+PIN 48 16 NONE 8
+PINATTR PinName Out_Rtn
+PINATTR SpiceOrder 6

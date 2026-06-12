@@ -1,0 +1,42 @@
+Version 4
+SymbolType BLOCK
+LINE Normal -80 -32 -112 -32
+LINE Normal -80 0 -80 -32
+LINE Normal -64 0 -96 0
+LINE Normal -80 32 -64 0
+LINE Normal -96 0 -80 32
+LINE Normal -64 32 -96 32
+LINE Normal -80 64 -80 32
+LINE Normal -112 64 -80 64
+LINE Normal 80 -32 112 -32
+LINE Normal 80 -8 80 -32
+LINE Normal 64 8 80 -8
+LINE Normal 80 64 112 64
+LINE Normal 80 39 80 64
+LINE Normal 64 23 80 39
+LINE Normal 64 32 64 -1
+LINE Normal 75 31 80 39
+LINE Normal 72 34 75 31
+LINE Normal 80 39 72 34
+LINE Normal 48 16 17 8
+LINE Normal 41 -15 48 16
+RECTANGLE Normal -144 -112 144 96
+ARC Normal 48 0 0 32 48 16 0 16
+ARC Normal -48 32 0 0 -48 16 0 16
+WINDOW 0 -1 -112 Bottom 2
+WINDOW 39 -4 -95 Center 2
+WINDOW 40 2 -64 Center 2
+SYMATTR SpiceLine CTR=1.0 VF_D=1.0
+SYMATTR SpiceLine2 RS_D=10.0 fc_Hz=100k
+PIN -144 -32 LEFT 8
+PINATTR PinName A
+PINATTR SpiceOrder 1
+PIN 144 -32 RIGHT 8
+PINATTR PinName C
+PINATTR SpiceOrder 2
+PIN 144 64 RIGHT 8
+PINATTR PinName E
+PINATTR SpiceOrder 3
+PIN -144 64 LEFT 8
+PINATTR PinName K
+PINATTR SpiceOrder 4
