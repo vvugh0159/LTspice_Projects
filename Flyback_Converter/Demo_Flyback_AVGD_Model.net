@@ -23,7 +23,7 @@ R52 OUT N049 {15/0.1}
 V6 N050 0 PULSE(0 5 67m 100n 100n 1m)
 Lp1 N003 N005 {Lm}
 Ls1 N006 0 {Ls}
-V2 NC_01 0 PULSE(100m {VIN} 5m 10m)
+V2 IN 0 PULSE(100m {VIN} 5m 10m)
 R1 INJ FB_SEC 10k
 R3 FB_SEC 0 10k
 C2 N055 IN_M_OPTO 0.1µ
@@ -33,7 +33,7 @@ R9 N045 INJ 1
 C3 FB_SEC IN_M_OPTO 0.01µ
 VINJ N045 OUT 0 AC 1
 X§X2 0 IN_M_OPTO FB_SEC TL431
-V3 IN 0 {VIN}
+V3 NC_01 0 {VIN}
 R20 N012 N024 {RESR_COUT}
 D1 N002 N007 1N4148
 C4 N025 0 {Cout/7}
@@ -190,20 +190,19 @@ Q1 0 0 0 0 NPN_UC2845
 Q2 0 0 0 0 PNP_UC2845
 S1 N002 VCC VCC 0 SW_UC2845
 D1 RTN VCC UDZV33B
-X§U2 N012 FB VBIAS RTN N009 LT1498 ;§pnba In+)In-)V+)V-)OUT
-D2 COMP N009 1N4148
+D2 COMP P001 1N4148
 I1 VBIAS COMP 500µ
 D3 COMP VBIAS Dideal_UC2845
-R5 VBIAS N012 5k
-R6 N012 RTN 5k
-D4 COMP N010 Dtyp_UC2845
-D5 N010 N011 Dtyp_UC2845
-R7 N011 ERR_AMP_OUT 100k
+R5 VBIAS N011 5k
+R6 N011 RTN 5k
+D4 COMP N009 Dtyp_UC2845
+D5 N009 N010 Dtyp_UC2845
+R7 N010 ERR_AMP_OUT 100k
 R8 ERR_AMP_OUT RTN 50k
 R10 RT_CT 0 1G
 E1 DUTY_OUT_PEAK_CM_CTL RTN ERR_AMP_OUT SCALED_IPEAK 10k
-D6 N004 N015 Dideal_UC2845
-V1 N015 RTN {Max_Duty}
+D6 N004 N014 Dideal_UC2845
+V1 N014 RTN {Max_Duty}
 D7 RTN N004 Dideal_UC2845
 E2 N003 RTN DUTY_OUT_PEAK_CM_CTL RTN 1
 R11 N003 N004 100
@@ -226,18 +225,19 @@ E8 SCALED_IPEAK RTN I_Peak RTN {{CS_RATIO}*{RSENSE}}
 BMode1 Mode 0 V= IF(V(I_Peak_CCM) > V(I_Peak_DCM), 1, 0)
 E9 OUT RTN N007 RTN 1.0
 R1 N002 N008 10k
-E4 N013 RTN N008 RTN 1.0
+E4 N012 RTN N008 RTN 1.0
 R2 N008 RTN 10k
 R3 VCC RTN 1Meg
 E10 N001 RTN N008 RTN 1.0
-D8 N008 N016 Dideal_UC2845
-VREF_5V N016 RTN 5
-VSNS1 N013 N014 0
+D8 N008 N015 Dideal_UC2845
+VREF_5V N015 RTN 5
+VSNS1 N012 N013 0
 VSNS2 N001 VBIAS 0
 B5 VCC RTN I={I(VSNS1)+I(VSNS2)}
-R4 N014 VREF 20
+R4 N013 VREF 20
 R9 N004 RTN 10k
 R14 COMP RTN 100k
+X§U1 N011 FB VBIAS RTN P001 NC_01 ADA4807 ;§pnba 100)101)102)103)104)106
 .model NPN_UC2845 NPN
 .model PNP_UC2845 PNP
 .model SW_UC2845 SW(Ron=10m, Roff=100Meg, Vt={UVLO_THRES}, Vh={-{UVLO_HYST}})
@@ -283,13 +283,13 @@ R5 3 0 1G
 * Load Step
 K2 Lp1 Ls1 1
 * .nodeset V(3) = 5\n.nodeset V(INJ2) = 5\n.nodeset V(FB_SEC) = 2.5\n.nodeset V(IN_P_OPTO) = 3.4\n.nodeset V(IN_M_OPTO) = 2.7\n.nodeset V(OPTO_EMITTER) = 2.5001\n.nodeset V(FB) = 2.5\n.nodeset V(5) ={Dcalc}
-* .tran 0 500m 0 startup
+.tran 0 500m 0 startup
 .model SW SW(Ron=10m, Roff=10Meg, Vt=2.5, Vh=-0.1)
 .param Fs = 96k
 .param Ts = {1.0/{Fs}}
 .param D = 0.224
 .param Cout = 650u
-.param RL = 2.0
+.param RL = 100.0
 .param VIN = 30
 .param VOUT =5.05
 .param Lm = 9u
@@ -319,24 +319,24 @@ K2 Lp1 Ls1 1
 + )
 *$
 .options
-+ Gmin = 1e-7
-+ Abstol = 1e-7
++ Gmin = 1e-6
++ Abstol = 1e-6
 + Reltol = 0.001
-+ Chgtol = 1e-8
++ Chgtol = 1e-7
 + Trtol = 2
-+ vntol = 0.001
++ vntol = 0.01
 + Sstol = 0.001
 + MinDeltaGmin = 0.0001
 + Method = Gear
 .model Dideal D(Ron=1u Roff=10Meg Vfwd=1u Vrev=200)
-.ac dec 1k 1 10Meg
+* .ac dec 1k 1 10Meg
 .param Dcalc = ({VOUT}/{VIN})/(SQRT(({RL}*{Ts})/(2*{Lm})))
 .param VD_OPTO = 0.7
 .param CTR={2.25}
 .param RS_OPTO = 10.0
 .param fc_OPTO = 74k
 .savebias dc_operating_point.txt time=400m
-.loadbias dc_operating_point.txt
+* .loadbias dc_operating_point.txt
 .model Din_Opto D(Ron=1u Roff=10Meg Vfwd=1.2 Vrev=200)
 .param RESR_COUT=50m
 .param LESL_CCER=5n
@@ -346,7 +346,7 @@ K2 Lp1 Ls1 1
 *for TLM of Averaged Values
 .param Rfilt = 10k
 .param Cfilt = 2200p
-.step temp list 25 50 85 125
+.lib ADA4807.sub
 .lib LTC.lib
 .backanno
 .end

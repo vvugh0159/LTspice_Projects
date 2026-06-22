@@ -1,0 +1,21 @@
+LTspice 24.1.10 for Windows
+Circuit: C:\Users\vvuon\Documents\LTspice_Projects\Flyback_Converter\Transient_Model_Steady_State.net
+Start Time: Sun Jun 14 22:25:07 2026
+solver = Alternate
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = trap
+1n5811: coefficient Fc too large, limited to 0.95
+Direct Newton iteration for .op point succeeded.
+
+Simulation stopped by user.
+Total elapsed time: 46.008 seconds.
+
+Files loaded:
+C:\Users\vvuon\Documents\LTspice_Projects\Flyback_Converter\Transient_Model_Steady_State.net
+C:\Users\vvuon\AppData\Local\LTspice\lib\cmp\standard.dio
+C:\Users\vvuon\AppData\Local\LTspice\lib\cmp\standard.bjt
+C:\Users\vvuon\AppData\Local\LTspice\lib\cmp\standard.mos
+C:\Users\vvuon\AppData\Local\LTspice\lib\sub\LT1245.sub
+

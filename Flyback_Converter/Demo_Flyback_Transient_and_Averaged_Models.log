@@ -1,6 +1,6 @@
 LTspice 24.1.10 for Windows
 Circuit: C:\Users\vvuon\Documents\LTspice_Projects\Flyback_Converter\Demo_Flyback_Transient_and_Averaged_Models.net
-Start Time: Sat Jun 13 00:58:25 2026
+Start Time: Sun Jun 14 21:34:41 2026
 Options:
 + Gmin = 1e-7
 + Abstol = 1e-7
@@ -30,14 +30,23 @@ vernier = 0.5
 vernier = 0.25
 vernier = 0.125
 vernier = 0.0625
-vernier = 0.03125
-Gmin = 1.20567
-vernier = 0.015625
-vernier = 0.0078125
-vernier = 0.00390625
-vernier = 0.00195312
-vernier = 0.000976562
-vernier = 0.000488281
+Gmin = 0.819855
+vernier = 0.0833333
+Gmin = 0.684378
+vernier = 0.111111
+vernier = 0.148148
+Gmin = 0.509992
+vernier = 0.074074
+vernier = 0.037037
+vernier = 0.0185185
+Gmin = 0.463447
+vernier = 0.00925925
+vernier = 0.00462963
+vernier = 0.00231481
+vernier = 0.00115741
+Gmin = 0.464114
+vernier = 0.000578703
+vernier = 0.000434027
 Gmin = 0
 Gmin stepping failed
 
@@ -131,14 +140,17 @@ Source Step = 83.2085%
 vernier = 0.285087
 Source Step = 89.5438%
 Source Step = 98.1828%
-Pseudo Transient failed in finding the operating point at 2 ns.
+Pseudo Transient failed in finding the operating point at 1.00665 s.
 Trouble finding operating point....skipping operating point for Transient analysis.
 Changing Tseed to 1e-07
 Changing Tseed to 1e-09
-Warning: Simulation tolerance relaxed to achieve convergence from 1.3486327743580592e-09 to 1.3486327753580592e-09 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 5.2421874434361375e-09 to 5.2421874444361368e-09 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 5.2421874444361368e-09 to 5.2421874454361369e-09 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 5.3467239919990330e-09 to 5.3467239929990332e-09 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 5.3467239929990332e-09 to 5.3467239939990333e-09 seconds.
 
 Simulation stopped by user.
-Total elapsed time: 584.166 seconds.
+Total elapsed time: 113.920 seconds.
 
 Files loaded:
 C:\Users\vvuon\Documents\LTspice_Projects\Flyback_Converter\Demo_Flyback_Transient_and_Averaged_Models.net
@@ -148,5 +160,4 @@ C:\Users\vvuon\AppData\Local\LTspice\lib\cmp\standard.mos
 C:\Users\vvuon\Documents\LTspice_Projects\Flyback_Converter\dc_operating_point.txt
 C:\Users\vvuon\AppData\Local\LTspice\lib\sub\LT1245.sub
 C:\Users\vvuon\AppData\Local\LTspice\lib\sub\LTC.lib
-C:\Users\vvuon\AppData\Local\LTspice\lib\sub\LTC7.lib
 
