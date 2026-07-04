@@ -1,0 +1,293 @@
+*****************************************************************************
+* EPC2152: 80V, 15A ePower Stage Simulation Model File 
+* (C) Copyright Efficient Power Conversion Corporation. All rights reserved. 
+* ***********************************************************************
+* Version History:
+*	1.01:	10/18/2021	First release
+*   1.02:   02/18/2022  Updated netlist name
+
+.subckt EPC2152_model HSin LSin SW Vboot Vdd12 Vin Vss 
+* PORT=Vin TYPE=In
+* PORT=Vss TYPE=In
+* PORT=Vdd12 TYPE=In
+* PORT=LSin TYPE=In
+* PORT=SW TYPE=InOut
+* PORT=Vboot TYPE=In
+* PORT=HSin TYPE=In
+
+XATLock_1 N_15 N_13 N_6 N_14 N_12 N_7 Vss ATLock $ $x=330 $y=120 $w=100 $h=120
+XCBoot_1 N_7 LSG Vboot Vdd12 Vss CBoot $ $x=880 $y=240 $w=100 $h=100
+Xdelay_20n_1 N_8 N_11 Vss delay_20n $ $x=970 $y=65 $w=100 $h=70
+Xdelay_20n_2 N_9 N_10 SW delay_20n $ $x=1060 $y=455 $w=100 $h=70
+XHS_rf_ctrl_1 N_10 HSG SW HS_rf_ctrl $ $x=1180 $y=465 $w=80 $h=70
+XHS_SCur_1 HSG SW Vboot HS_SCur $ $x=1415 $y=410 $w=70 $h=80
+Xinv_1 N_7 N_2 Vss inv $ $x=670 $y=105 $w=100 $h=70
+Xinv_2 N_1 N_3 SW inv $ $x=780 $y=485 $w=100 $h=70
+XLogicTrans_1 LSin N_12 N_14 Vdd12 Vss LogicTrans $ $x=130 $y=70 $w=100 $h=100
+XLogicTrans_2 HSin N_13 N_15 Vdd12 Vss LogicTrans $ $x=130 $y=210 $w=100 $h=100
+XLS_rf_ctrl_1 N_11 LSG Vss LS_rf_ctrl $ $x=1120 $y=75 $w=80 $h=70
+XLS_SCur_1 LSG Vdd12 Vss LS_SCur $ $x=1385 $y=170 $w=70 $h=80
+Xnor2_1 N_2 N_4 N_8 Vss nor2 $ $x=810 $y=60 $w=100 $h=80
+Xnor2_2 N_3 N_5 N_9 SW nor2 $ $x=920 $y=450 $w=100 $h=80
+XPOR_1 N_4 Vdd12 Vss POR $ $x=510 $y=65 $w=100 $h=70
+XPOR_2 N_5 Vboot SW POR $ $x=640 $y=415 $w=100 $h=70
+Xpwr_fet_1 Vin HSG SW pwr_fet $ $x=1325 $y=470 $w=70 $h=100
+Xpwr_fet_2 SW LSG Vss pwr_fet $ $x=1285 $y=80 $w=70 $h=100
+EE1 N_1 SW N_6 Vss  1 $ $x=490 $y=420 $w=60 $h=60 $m
+.ends
+
+.subckt LogicTrans In OutN OutP Vdd12 Vss 
+* PORT=OutN TYPE=Out
+* PORT=Vdd12 TYPE=In
+* PORT=In TYPE=In
+* PORT=OutP TYPE=Out
+* PORT=Vss TYPE=In
+
+CC1 In Vss  6p $ $x=180 $y=530 $w=40 $h=60
+RR1 N_3 N_4  R=30.4k $ $x=440 $y=670 $w=12 $h=60
+RR2 N_4 Vss  R=7.6k $ $x=440 $y=530 $w=12 $h=60
+RR3 In N_4  R=70 $ $x=350 $y=610 $w=60 $h=12
+RR4 N_5 N_2  R=10k $ $x=580 $y=660 $w=12 $h=60
+RR5 N_5 N_1  R=10k $ $x=680 $y=660 $w=12 $h=60
+VV1 N_5 Vss DC 5 $ $x=970 $y=510 $w=40 $h=60
+SS1 N_1 Vss N_2 Vss S1_Model
+.MODEL S1_Model sw Ron=10 Roff=10MEG Vt=2.5 Vh=0  $ $x=665 $y=520 $w=50 $h=60 $m
+SS2 N_2 Vss N_4 Vss S2_Model
+.MODEL S2_Model sw Ron=10 Roff=10MEG Vt=1.6 Vh=500m  $ $x=565 $y=520 $w=50 $h=60 $m
+EE1 N_3 Vss Vdd12 Vss  416.66667m $ $x=290 $y=670 $w=60 $h=60 $m
+EE2 OutP Vss N_1 Vss  1 $ $x=850 $y=520 $w=60 $h=60 $m
+EE3 OutN Vss N_2 Vss  1 $ $x=750 $y=520 $w=60 $h=60 $m
+.ends
+
+.subckt delay_5n A Q Vss 
+* PORT=A TYPE=In
+* PORT=Q TYPE=Out
+* PORT=Vss TYPE=In
+
+CC2 N_3 Vss  500f $ $x=810 $y=360 $w=40 $h=60
+CC3 N_4 Vss  500f $ $x=650 $y=360 $w=40 $h=60
+RR1 N_5 N_4  R=10k $ $x=600 $y=500 $w=12 $h=60
+RR2 N_5 N_3  R=10k $ $x=760 $y=500 $w=12 $h=60
+RR3 N_5 N_2  R=10k $ $x=920 $y=500 $w=12 $h=60
+RR4 N_5 N_1  R=10k $ $x=1020 $y=500 $w=12 $h=60
+VV1 N_5 Vss DC 5 $ $x=1220 $y=370 $w=40 $h=60
+SS1 N_3 Vss N_4 Vss S1_Model
+.MODEL S1_Model sw Ron=10 Roff=10MEG Vt=3.16 Vh=0  $ $x=745 $y=360 $w=50 $h=60 $m
+SS2 N_4 Vss A Vss S2_Model
+.MODEL S2_Model sw Ron=10 Roff=10MEG Vt=2.5 Vh=0  $ $x=585 $y=360 $w=50 $h=60 $m
+SS3 N_2 Vss N_3 Vss S3_Model
+.MODEL S3_Model sw Ron=10 Roff=10MEG Vt=3.16 Vh=0  $ $x=905 $y=360 $w=50 $h=60 $m
+SS4 N_1 Vss N_2 Vss S4_Model
+.MODEL S4_Model sw Ron=10 Roff=10MEG Vt=2.5 Vh=0  $ $x=1005 $y=360 $w=50 $h=60 $m
+EE1 Q Vss N_1 Vss  1 $ $x=1100 $y=370 $w=60 $h=60 $m
+.ends
+
+.subckt nor2 A B Q Vss 
+* PORT=Q TYPE=Out
+* PORT=Vss TYPE=In
+* PORT=B TYPE=In
+* PORT=A TYPE=In
+
+RR1 N_2 N_1  R=10k $ $x=600 $y=500 $w=12 $h=60
+VV1 N_2 Vss DC 5 $ $x=700 $y=360 $w=40 $h=60
+SS1 N_1 Vss B Vss S1_Model
+.MODEL S1_Model sw Ron=10 Roff=10MEG Vt=2.5 Vh=0  $ $x=425 $y=360 $w=50 $h=60 $m
+SS2 N_1 Vss A Vss S2_Model
+.MODEL S2_Model sw Ron=10 Roff=10MEG Vt=2.5 Vh=0  $ $x=585 $y=360 $w=50 $h=60 $m
+EE1 Q Vss N_1 Vss  1 $ $x=800 $y=360 $w=60 $h=60 $m
+.ends
+
+.subckt ATLock HSi HSib HSo LSi LSib LSo Vss 
+* PORT=HSib TYPE=In
+* PORT=HSi TYPE=In
+* PORT=LSi TYPE=In
+* PORT=HSo TYPE=Out
+* PORT=LSo TYPE=Out
+* PORT=Vss TYPE=In
+* PORT=LSib TYPE=In
+
+Xdelay_5n_1 HSi N_1 Vss delay_5n $ $x=150 $y=285 $w=100 $h=70
+Xdelay_5n_2 LSi N_2 Vss delay_5n $ $x=150 $y=125 $w=100 $h=70
+Xnor2_1 HSib N_2 HSo Vss nor2 $ $x=350 $y=290 $w=100 $h=80
+Xnor2_2 LSib N_1 LSo Vss nor2 $ $x=350 $y=130 $w=100 $h=80
+.ends
+
+.subckt POR POR Vdd12 Vss 
+* PORT=POR TYPE=Out
+* PORT=Vdd12 TYPE=In
+* PORT=Vss TYPE=In
+
+RR1 N_2 N_1  R=10k $ $x=600 $y=500 $w=12 $h=60
+VV1 N_2 Vss DC 5 $ $x=700 $y=360 $w=40 $h=60
+SS2 N_1 Vss Vdd12 Vss S2_Model
+.MODEL S2_Model sw  Vt=7.2 Vh=500m  $ $x=585 $y=360 $w=50 $h=60 $m
+EE1 POR Vss N_1 Vss  1 $ $x=800 $y=360 $w=60 $h=60 $m
+.ends
+
+.subckt inv A Q Vss 
+* PORT=Q TYPE=Out
+* PORT=A TYPE=In
+* PORT=Vss TYPE=In
+
+RR1 N_2 N_1  R=10k $ $x=600 $y=500 $w=12 $h=60
+VV1 N_2 Vss DC 5 $ $x=700 $y=360 $w=40 $h=60
+SS2 N_1 Vss A Vss S2_Model
+.MODEL S2_Model sw  Vt=2.5 Vh=0  $ $x=585 $y=360 $w=50 $h=60 $m
+EE1 Q Vss N_1 Vss  1 $ $x=800 $y=360 $w=60 $h=60 $m
+.ends
+
+.subckt CBoot A B Vboot Vdd12 Vss 
+* PORT=A TYPE=In
+* PORT=B TYPE=In
+* PORT=Vdd12 TYPE=In
+* PORT=Vss TYPE=In
+* PORT=Vboot TYPE=Out
+
+RR4 N_4 N_2  R=10k $ $x=580 $y=660 $w=12 $h=60
+RR5 N_4 N_3  R=10k $ $x=680 $y=660 $w=12 $h=60
+VV1 N_4 Vss DC 5 $ $x=850 $y=400 $w=40 $h=60
+SS1 N_1 Vss B Vss S1_Model
+.MODEL S1_Model sw Ron=5 Roff=10MEG Vt=2.5 Vh=0  $ $x=565 $y=400 $w=50 $h=60 $m
+SS2 N_2 N_1 A Vss S2_Model
+.MODEL S2_Model sw Ron=5 Roff=10MEG Vt=2.5 Vh=0  $ $x=565 $y=520 $w=50 $h=60 $m
+SS3 N_3 Vss N_2 Vss S3_Model
+.MODEL S3_Model sw Ron=5 Roff=10MEG Vt=2.5 Vh=0  $ $x=665 $y=520 $w=50 $h=60 $m
+SS4 Vdd12 Vboot N_3 Vss S4_Model
+.MODEL S4_Model sw Ron=4 Roff=10MEG Vt=2.5 Vh=0  $ $x=785 $y=560 $w=50 $h=60 $m
+.ends
+
+.subckt delay_20n A Q Vss 
+* PORT=A TYPE=In
+* PORT=Q TYPE=Out
+* PORT=Vss TYPE=In
+
+CC2 N_3 Vss  2p $ $x=810 $y=360 $w=40 $h=60
+CC3 N_4 Vss  2p $ $x=650 $y=360 $w=40 $h=60
+RR1 N_5 N_4  R=10k $ $x=600 $y=500 $w=12 $h=60
+RR2 N_5 N_3  R=10k $ $x=760 $y=500 $w=12 $h=60
+RR3 N_5 N_2  R=10k $ $x=920 $y=500 $w=12 $h=60
+RR4 N_5 N_1  R=10k $ $x=1020 $y=500 $w=12 $h=60
+VV1 N_5 Vss DC 5 $ $x=1220 $y=370 $w=40 $h=60
+SS1 N_3 Vss N_4 Vss S1_Model
+.MODEL S1_Model sw Ron=10 Roff=10MEG Vt=3.16 Vh=0  $ $x=745 $y=360 $w=50 $h=60 $m
+SS2 N_4 Vss A Vss S2_Model
+.MODEL S2_Model sw Ron=10 Roff=10MEG Vt=2.5 Vh=0  $ $x=585 $y=360 $w=50 $h=60 $m
+SS3 N_2 Vss N_3 Vss S3_Model
+.MODEL S3_Model sw Ron=10 Roff=10MEG Vt=3.16 Vh=0  $ $x=905 $y=360 $w=50 $h=60 $m
+SS4 N_1 Vss N_2 Vss S4_Model
+.MODEL S4_Model sw Ron=10 Roff=10MEG Vt=2.5 Vh=0  $ $x=1005 $y=360 $w=50 $h=60 $m
+EE1 Q Vss N_1 Vss  1 $ $x=1100 $y=370 $w=60 $h=60 $m
+.ends
+
+.subckt HS_SCur HSG SW Vboot 
+* PORT=Vboot TYPE=In
+* PORT=HSG TYPE=In
+* PORT=SW TYPE=In
+
+CC1 N_1 SW  650p $ $x=230 $y=70 $w=40 $h=60
+RR1 Vboot SW  R=1.5k $ $x=300 $y=150 $w=12 $h=60
+VV1 N_2 SW DC 5 $ $x=390 $y=70 $w=40 $h=60
+SS1 N_2 N_1 N_2 HSG S1_Model
+.MODEL S1_Model sw Ron=2 Roff=10MEG Vt=2.4 Vh=0  $ $x=125 $y=230 $w=50 $h=60 $m
+SS2 N_1 SW HSG SW S2_Model
+.MODEL S2_Model sw Ron=2 Roff=10MEG Vt=2.4 Vh=0  $ $x=125 $y=70 $w=50 $h=60 $m
+FF1 SW Vboot  VV1 1 $ $x=485 $y=70 $w=50 $h=60 $r=180
+.ends
+
+.subckt LS_SCur LSG Vdd12 Vss 
+* PORT=Vdd12 TYPE=In
+* PORT=LSG TYPE=In
+* PORT=Vss TYPE=In
+
+CC1 N_1 Vss  675p $ $x=230 $y=70 $w=40 $h=60
+RR1 Vdd12 Vss  R=1.2k $ $x=300 $y=150 $w=12 $h=60
+VV1 N_2 Vss DC 5 $ $x=410 $y=70 $w=40 $h=60
+SS1 N_2 N_1 N_2 LSG S1_Model
+.MODEL S1_Model sw Ron=2 Roff=10MEG Vt=2.4 Vh=0  $ $x=125 $y=230 $w=50 $h=60 $m
+SS2 N_1 Vss LSG Vss S2_Model
+.MODEL S2_Model sw Ron=2 Roff=10MEG Vt=2.4 Vh=0  $ $x=125 $y=70 $w=50 $h=60 $m
+FF1 Vss Vdd12  VV1 1 $ $x=505 $y=70 $w=50 $h=60 $r=180
+.ends
+
+.subckt HS_rf_ctrl A Q SW 
+* PORT=SW TYPE=In
+* PORT=Q TYPE=Out
+* PORT=A TYPE=In
+
+Xinv_1 A N_3 SW inv $ $x=30 $y=135 $w=100 $h=70
+CC1 N_1 SW  650p $ $x=230 $y=70 $w=40 $h=60
+VV1 N_2 SW DC 5 $ $x=340 $y=70 $w=40 $h=60
+SS1 N_2 N_1 N_2 N_3 S1_Model
+.MODEL S1_Model sw Ron=7 Roff=10MEG Vt=2.4 Vh=0  $ $x=125 $y=230 $w=50 $h=60 $m
+SS2 N_1 SW N_3 SW S2_Model
+.MODEL S2_Model sw Ron=700m Roff=10MEG Vt=2.4 Vh=0  $ $x=125 $y=70 $w=50 $h=60 $m
+EE1 Q SW N_1 SW  1 $ $x=430 $y=60 $w=60 $h=60 $m
+.ends
+
+.subckt LS_rf_ctrl A Q Vss 
+* PORT=Vss TYPE=In
+* PORT=Q TYPE=Out
+* PORT=A TYPE=In
+
+Xinv_1 A N_3 Vss inv $ $x=30 $y=135 $w=100 $h=70
+CC1 N_1 Vss  650p $ $x=230 $y=70 $w=40 $h=60
+VV1 N_2 Vss DC 5 $ $x=340 $y=70 $w=40 $h=60
+SS1 N_2 N_1 N_2 N_3 S1_Model
+.MODEL S1_Model sw Ron=7 Roff=10MEG Vt=2.4 Vh=0  $ $x=125 $y=230 $w=50 $h=60 $m
+SS2 N_1 Vss N_3 Vss S2_Model
+.MODEL S2_Model sw Ron=700m Roff=10MEG Vt=2.4 Vh=0  $ $x=125 $y=70 $w=50 $h=60 $m
+EE1 Q Vss N_1 Vss  1 $ $x=430 $y=60 $w=60 $h=60 $m
+.ends
+
+.subckt pwr_fet drainin gatein sourcein
+.param aWg=507 A1=15.438 k2=1.8687 k3=0.15 rpara=0.006771 rpara_s_factor=0.21 
+ + aITc=0.004 arTc=-0.008 k2Tc=0.0008 x0_0=1.4657 x0_1=-0.1 x0_0_TC=-0.0025 x0_1_TC=0 
+ + dgs1=4.3e-07 dgs2=2.6e-13 dgs3=0.8 dgs4=0.23 
+ + ags1=3.3565e-10 ags2=1.8529e-10 ags3=1.4202 ags4=0.24025 
+ + ags5=-2.8626e-11 ags6=8.775 ags7=2.3616 
+ + agd1=5.5248e-15 agd2=7.5016e-12 agd3=-5.6168 agd4=39.134 
+ + agd5=4.1642e-11 agd6=-9.9839 agd7=3.5643 
+ + agd8=8.052e-13 agd9=-393.8 agd10=12.564 
+ + asd1=1.6619e-10 asd2=3.0262e-10 asd3=-0.70556 asd4=40.38 
+ + asd5=2.064e-10 asd6=-17.42 asd7=1.793 rg_value=0.4 
+
+rd drainin drain {((1-rpara_s_factor)*rpara*(1-arTc*(Temp-25)))}
+rs sourcein source {(rpara_s_factor*rpara*(1-arTc*(Temp-25)))}
+rg gatein gate {(rg_value)}
+
+Rcsdconv drain source {100000Meg/aWg}
+Rcgsconv gate source {100000Meg/aWg}
+Rcgdconv gate drain {100000Meg/aWg}
+
+bswitch drain source I=if(v(drain,source)>0,
++	(A1*(1-aITc*(Temp-25))*log(1.0+exp((v(gate,source)-(k2*(1-k2Tc*(Temp-25))))/k3))* 
++	v(drain,source)/(1 + (x0_0*(1-x0_0_TC*(Temp-25))+x0_1*(1-x0_1_TC*(Temp-25))*v(gate,source))*v(drain,source)) ),
++	(-A1*(1-aITc*(Temp-25))*log(1.0+exp((v(gate,drain)-(k2*(1-k2Tc*(Temp-25))))/k3))* 
++	v(source,drain)/(1 + (x0_0*(1-x0_0_TC*(Temp-25))+x0_1*(1-x0_1_TC*(Temp-25))*v(gate,drain))*v(source,drain)) ) )
+
+bgsdiode gate source I=if( v(gate,source)>10,
++	(0.125*aWg/1077*(dgs1*(exp((10.0)/dgs3)-1)+dgs2*(exp((10.0)/dgs4)-1))),
++	(0.125*aWg/1077*(dgs1*(exp((v(gate,source))/dgs3)-1)+dgs2*(exp((v(gate,source))/dgs4)-1))))
+
+bgddiode gate drain I=if( v(gate,drain)>10,
++	(0.125*aWg/1077*(dgs1*(exp((10.0)/dgs3)-1)+dgs2*(exp((10.0)/dgs4)-1))),
++	(0.125*aWg/1077*(dgs1*(exp((v(gate,drain))/dgs3)-1)+dgs2*(exp((v(gate,drain))/dgs4)-1))) )
+
+
+C_GS       	gate source  {ags1}  TC=0,0
+C_CGS1     	gate source Q=(0.5*ags2*ags4*log(1+exp((v(gate,source)-ags3)/ags4))+
++	ags5*ags7*log(1+exp((v(source,drain)-ags6)/ags7)) )
+
+C_GD      	gate drain  {agd1}  TC=0,0 
+C_CGD1    	gate drain Q=(0.5*ags2*ags4*log(1+exp((v(gate,drain)-ags3)/ags4))+
++	        agd2*agd4*log(1+exp((v(gate,drain)-agd3)/agd4))+
++           agd5*agd7*log(1+exp((v(gate,drain)-agd6)/agd7))+ 
++           agd8*agd10*log(1+exp((v(gate,drain)-agd9)/agd10)))
+
+C_SD       	source drain  {asd1}  TC=0,0
+C_CSD1	source drain Q=(asd2*asd4*log(1+exp((v(source,drain)-asd3)/asd4))+
++	asd5*asd7*log(1+exp((v(source,drain)-asd6)/asd7)) )           
+
+.ends pwr_fet
+
+
