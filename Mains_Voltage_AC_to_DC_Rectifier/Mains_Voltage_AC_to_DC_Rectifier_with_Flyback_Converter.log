@@ -1,0 +1,22 @@
+LTspice 26.0.2 for Windows
+Circuit: C:\Users\vvuon\Documents\LTspice_Projects\Mains_Voltage_AC_to_DC_Rectifier\Mains_Voltage_AC_to_DC_Rectifier_with_Flyback_Converter.net
+Start Time: Sat Jul  4 21:35:38 2026
+solver = Alternate
+Maximum thread count: 22
+tnom = 27
+temp = 27
+method = Gear
+Direct Newton iteration succeeded in finding operating point.
+
+Simulation stopped by user.
+Total elapsed time: 115.787 seconds.
+
+Files loaded:
+C:\Users\vvuon\Documents\LTspice_Projects\Mains_Voltage_AC_to_DC_Rectifier\Mains_Voltage_AC_to_DC_Rectifier_with_Flyback_Converter.net
+C:\Users\vvuon\AppData\Local\LTspice\lib\cmp\standard.dio
+C:\Users\vvuon\AppData\Local\LTspice\lib\cmp\standard.bjt
+C:\Users\vvuon\AppData\Local\LTspice\lib\cmp\standard.mos
+C:\Users\vvuon\AppData\Local\LTspice\lib\sub\4N25.sub
+C:\Users\vvuon\AppData\Local\LTspice\lib\sub\LT1245.sub
+C:\Users\vvuon\AppData\Local\LTspice\lib\sub\LT1431.sub
+
