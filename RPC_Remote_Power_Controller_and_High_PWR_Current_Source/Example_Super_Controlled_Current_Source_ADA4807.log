@@ -1,0 +1,37 @@
+LTspice 26.0.2 for Windows
+Circuit: C:\Users\vvuon\Documents\LTspice_Projects\RPC_Remote_Power_Controller_and_High_PWR_Current_Source\Example_Super_Controlled_Current_Source_ADA4807.net
+Start Time: Wed Aug  5 23:55:42 2026
+Options:noopiter abstol=1E-4 reltol=1E-4
+
+.step cload=1e-06 lcable=1e-07
+solver = Alternate
+Maximum thread count: 22
+tnom = 27
+temp = 27
+method = Gear
+abstol = 0.0001
+reltol = 0.0001
+noOpIter = true
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0
+Starting source stepping with srcstepmethod=1
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping level 2
+Gmin stepping level 2 failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=1, level 2
+Trouble finding operating point....skipping operating point for Transient analysis.
+
+Simulation stopped by user.
+Total elapsed time: 8.181 seconds.
+
+Files loaded:
+C:\Users\vvuon\Documents\LTspice_Projects\RPC_Remote_Power_Controller_and_High_PWR_Current_Source\Example_Super_Controlled_Current_Source_ADA4807.net
+C:\Users\vvuon\AppData\Local\LTspice\lib\cmp\standard.dio
+C:\Users\vvuon\AppData\Local\LTspice\lib\cmp\standard.bjt
+C:\Users\vvuon\AppData\Local\LTspice\lib\cmp\standard.mos
+C:\Users\vvuon\AppData\Local\LTspice\lib\sub\ADA4807.sub
+C:\Users\vvuon\AppData\Local\LTspice\lib\sub\UniversalOpAmp5.lib
+

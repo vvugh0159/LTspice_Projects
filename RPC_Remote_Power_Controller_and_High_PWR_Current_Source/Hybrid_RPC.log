@@ -1,0 +1,138 @@
+LTspice 26.0.2 for Windows
+Circuit: C:\Users\vvuon\Documents\LTspice_Projects\RPC_Remote_Power_Controller_and_High_PWR_Current_Source\Hybrid_RPC.net
+Start Time: Sat Aug  1 13:58:31 2026
+Options:noopiter abstol=1E-4 reltol=1E-4
+
+.step cload=5e-05 lcable=5e-07 temp=-55° vbus=24
+solver = Alternate
+Maximum thread count: 22
+tnom = 27
+temp = -55
+method = Gear
+abstol = 0.0001
+reltol = 0.0001
+noOpIter = true
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=0.01 lcable=5e-07 temp=-55° vbus=24
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=5e-05 lcable=0.001 temp=-55° vbus=24
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=0.01 lcable=0.001 temp=-55° vbus=24
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=5e-05 lcable=5e-07 temp=25° vbus=24
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=0.01 lcable=5e-07 temp=25° vbus=24
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=5e-05 lcable=0.001 temp=25° vbus=24
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=0.01 lcable=0.001 temp=25° vbus=24
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=5e-05 lcable=5e-07 temp=155° vbus=24
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=0.01 lcable=5e-07 temp=155° vbus=24
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=5e-05 lcable=0.001 temp=155° vbus=24
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=0.01 lcable=0.001 temp=155° vbus=24
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=5e-05 lcable=5e-07 temp=-55° vbus=30
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=0.01 lcable=5e-07 temp=-55° vbus=30
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=5e-05 lcable=0.001 temp=-55° vbus=30
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=0.01 lcable=0.001 temp=-55° vbus=30
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=5e-05 lcable=5e-07 temp=25° vbus=30
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=0.01 lcable=5e-07 temp=25° vbus=30
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=5e-05 lcable=0.001 temp=25° vbus=30
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=0.01 lcable=0.001 temp=25° vbus=30
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cload=5e-05 lcable=5e-07 temp=155° vbus=30
+Direct Newton iteration for .op point skipped.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
